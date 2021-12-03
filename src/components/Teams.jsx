@@ -142,7 +142,7 @@ function Teams() {
 
 
 
-            <div className={classes.teamMembers}>
+            <div style={{marginLeft:"200px"}} className={classes.teamMembers}>
                 <div className={classes.member}>
                 <Avatar 
                 className={classes.teamPic}
@@ -199,7 +199,7 @@ function Teams() {
             </div>
 
 
-            <div className={classes.teamMembers}>
+            <div style={{marginLeft:"200px"}} className={classes.teamMembers}>
                 <div className={classes.member}>
                 <Avatar 
                 className={classes.teamPic}
