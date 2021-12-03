@@ -53,7 +53,8 @@ const useStyles = makeStyles((theme) =>({
       },
       sectionImg:{
           marginTop: theme.spacing(8)
-      }
+      }, 
+      
 }))
 
 function SectionIconRight({title, text, image_url}) {

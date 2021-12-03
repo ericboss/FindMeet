@@ -119,15 +119,15 @@ function Tokenomics() {
                 <div className={classes.tableGroup1}>
                 <img 
                 className={classes.tabella1}
-            src = "/images/TABELLA 1.png"/>
+            src = "/images/TABELLA1.png"/>
                 </div>
                 <div className={classes.tableGroup2}>
                 <img 
                 className={classes.tabella2}
-            src = "/images/TABELLA 2.png"/>
+            src = "/images/TABELLA2.png"/>
             <img 
             className={classes.tabella3}
-            src = "/images/TABELLA 3.png"/>
+            src = "/images/TABELLA3.png"/>
                 </div>
 
 

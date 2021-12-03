@@ -20,7 +20,7 @@ function App() {
            title="Huge Opportunity"
            text="With the spread of various social network on a global scale, humans realized that finding new friends or lovely mates has never been so much easier.
            Many families have grown all over the world thanks to dating apps and social network."
-           image_url="/images/image HUGE.png"
+           image_url="/images/ImageHUGE.png"
            />
            <SectionIconLeftList
            />
