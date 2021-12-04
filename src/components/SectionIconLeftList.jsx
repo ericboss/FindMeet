@@ -16,41 +16,42 @@ const useStyles = makeStyles((theme) =>({
             display:"flex",
             flexDirection:"column",
             marginTop:theme.spacing(5),
-            alignItems:"center"
+            alignItems:"center", 
+            marginBottom:theme.spacing(-18)
           }
     },
     sectionInfo:{
-        marginLeft:theme.spacing(4)
+        marginLeft:theme.spacing(1),
+        marginRight:theme.spacing(2),
     },
     sectionText:{
        width:"400px" , 
        fontFamily: ['Source Sans Pro', "sans-serif"  ],
        marginBottom:theme.spacing(3),
-       color:"#9c27b0", 
+       color:"#5d2177", 
+       [theme.breakpoints.down("sm")]:{
+        width:"290px",
+        marginLeft:theme.spacing(8),
+        fontSize:"19px",
+        textAlign:"center",
+        marginBottom:theme.spacing(5),
+      }
     },
     title:{
-        color:"#7a1e8a", 
+        color:"#ac3b69", 
         fontFamily: ['Source Sans Pro', "sans-serif"  ],
         fontWeight:"7",
+        fontSize:"60px",
+        width:"70%",
+        lineHeight : "55px" , 
         marginBottom:theme.spacing(3), 
         [theme.breakpoints.down("sm")]:{
-            width:theme.spacing(20),
-            marginLeft: theme.spacing(8)
+            width:theme.spacing(35),
+            marginLeft: theme.spacing(8),
+            marginRight: theme.spacing(8),
           }
     }, 
-    telegram:{
-        position:"relative",
-        marginTop: theme.spacing(5),
-        color: "white",
-        backgroundColor:"#7b1fa2",
-        textTransform:"capitalize", 
-        borderRadius:"10%", 
-        boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
-        [theme.breakpoints.down("sm")]:{
-            marginLeft: theme.spacing(8), 
-            marginBottom: theme.spacing(8)
-          }
-      },
+  
       list1:{
           display: "flex",
           alignItems:"center"
@@ -59,6 +60,69 @@ const useStyles = makeStyles((theme) =>({
         marginLeft: theme.spacing(1), 
         marginBottom: theme.spacing(1),
         fontFamily: ['Source Sans Pro', "sans-serif"  ], 
+      },
+      sectionImg:{
+          display:"block",
+       marginLeft:theme.spacing(25),
+       [theme.breakpoints.down("sm")]:{
+        display:"none"
+       
+       
+      }
+      },
+       sectionImgSub:{
+        width: theme.spacing(50), 
+        height  : theme.spacing(50),
+        [theme.breakpoints.down("sm")]:{
+            width: theme.spacing(55), 
+           height  : theme.spacing(55),
+           marginBottom: theme.spacing(5),
+          
+           
+           
+          }
+      },
+      
+      icon:{
+        width:theme.spacing(2),
+        [theme.breakpoints.down("sm")]:{
+            width:theme.spacing(3),
+            height:"auto"
+            
+          }
+      }, 
+     
+      item:{
+          color:"#5d2177",
+          marginLeft:theme.spacing(2),
+        [theme.breakpoints.down("sm")]:{
+            width:"295px" ,
+            fontSize:"18px",
+            marginLeft:theme.spacing(1), 
+            marginBottom:theme.spacing(1)
+            
+            
+          }  
+      }, 
+      lists:{
+        [theme.breakpoints.down("sm")]:{
+           
+            marginLeft:theme.spacing(5)
+            
+          }   
+      }, 
+      list1:{
+        display:"flex",
+        alignItems:"center",
+        marginBottom:theme.spacing(1),
+        
+        [theme.breakpoints.down("sm")]:{
+           
+            marginBottom:theme.spacing(1), 
+            display:"flex",
+            alignItems:"center"
+            
+          }
       }
 }))
 
@@ -95,13 +159,7 @@ function SectionIconLeftList() {
                     </div>
 
                   </div>
-                    <Button
-                    startIcon={<Send />}
-                    variant="contained"
-                    className ={classes.telegram}
-                     >
-                    Join Telegram
-                    </Button>
+                    
             </div>
             </Fade>
             

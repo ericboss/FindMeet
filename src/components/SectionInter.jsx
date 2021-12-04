@@ -8,46 +8,72 @@ import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) =>({
 main: {
+   
     backgroundImage: `url('./images/CTA Bg.png')`,
-        backgroundPosition: 'center', 
-        backgroundSize: 'cover', 
-        backgroundRepeat: 'no-repeat',
+       
+        backgroundSize: 'auto', 
+        backgroundRepeat:"no-repeat",
         width: "100%",
-        height:theme.spacing(95),
-        display:"flex",
-        flexDirection: "column", 
-        alignItems: "center", 
+        height:theme.spacing(150),
+        marginBottom:theme.spacing(-55),
+        [theme.breakpoints.down("sm")]:{
+            marginTop:theme.spacing(10), 
+        }
 },
 items:{
+    
     marginTop: theme.spacing(20),
     display:"flex",
     flexDirection: "column", 
     alignItems: "center",  
+    [theme.breakpoints.down("sm")]:{
+        marginTop:theme.spacing(15), 
+    }
+    
+    
 }, 
 title:{
+    marginTop: theme.spacing(30),
+    marginRight: theme.spacing(3),
     position:"relative",
     display:"flex",
-    alignItems:"center"
+    alignItems:"center", 
+    [theme.breakpoints.down("sm")]:{
+        marginLeft: theme.spacing(5), 
+        marginRight: theme.spacing(5), 
+        display:"flex",
+        alignItems: "center", 
+        flexDirection:"column",
+        marginTop:theme.spacing(25), 
+      }
 }, 
 body:{
     color:"white",
     fontFamily: ['Source Sans Pro', "sans-serif"  ],
+    textAlign:"center"
     
 }, 
 body1:{
-    marginTop:theme.spacing(3)
+    marginTop:theme.spacing(3),
+    width:theme.spacing(64),
+    textAlign:"center",
+    [theme.breakpoints.down("sm")]:{
+        marginLeft: theme.spacing(8), 
+        marginRight: theme.spacing(5),
+        width: "300px"
+      }
 },
 telegram:{
     position:"relative",
     marginTop: theme.spacing(5),
-    color: "white",
-    backgroundColor:"#7b1fa2", 
+    color: "#7b1fa2",
+    backgroundColor:"white", 
     textTransform:"capitalize",
     borderRadius:"10%", 
     boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
     [theme.breakpoints.down("sm")]:{
-        marginLeft: theme.spacing(8), 
-        marginLeft: theme.spacing(8)
+        marginLeft: theme.spacing(4), 
+        marginRight: theme.spacing(6)
       }
   },
   title1:{
@@ -55,10 +81,16 @@ telegram:{
       color:"white",
       fontFamily: ['Source Sans Pro', "sans-serif"  ],
      
-      top:theme.spacing(0)
+      top:theme.spacing(0), 
+      [theme.breakpoints.down("sm")]:{
+        fontSize:theme.spacing(4)
+      }
   }, 
   logo:{
     position:"relative",
+    [theme.breakpoints.down("sm")]:{
+        
+      }
      
   }
 
@@ -75,13 +107,14 @@ function SectionInter() {
                     
                     </div>
                <div className={classes.body1}>
-                <Typography className={classes.body} variant="body2">Think for a moment to take the best features of Tinder, Badoo, The Sims and bing</Typography>
-                <Typography className={classes.body} variant="body2">them to life in the metaverse. A metaverse where users can create a real economic</Typography>
-                <Typography className={classes.body} variant="body2">              value for themselves playing to earn and have fun.                 </Typography>
-                <Typography className={classes.body} variant="body2">                                                                                 </Typography>
-                <Typography className={classes.body} variant="body2">    Findmeet is the first decentralized dating and gaming social network in the  </Typography>
-                <Typography className={classes.body} variant="body2">  metaverse, where users can create their own profile, find new people and meet </Typography>
-                <Typography className={classes.body} variant="body2">  them on their metaverse space that has a real actual value on the marketplace  </Typography>
+                <Typography className={classes.body} variant="body2">Think for a moment to take the best features of Tinder, Badoo, The Sims and bring
+                them to life in the metaverse. A metaverse where users can create a real economic
+                              value for themselves playing to earn and have fun.                 
+                                                                    </Typography>
+                                                                    <br/> 
+                <Typography className={classes.body} variant="body2">    Findmeet is the first decentralized dating and gaming social network in the  
+                  metaverse, where users can create their own profile, find new people and meet 
+                  them on their metaverse space that has a real actual value on the marketplace  </Typography>
                 </div>
                 <Button
                     className={classes.telegram}

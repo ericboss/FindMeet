@@ -12,6 +12,8 @@ main: {
     backgroundPosition: 'center', 
     backgroundSize: 'cover', 
     backgroundRepeat: 'no-repeat',
+    width:"90%",
+  
  
 }, 
 teamInfo:{
@@ -21,37 +23,101 @@ teamInfo:{
     alignItems: "center" 
 },
 infoText:{
-    width:"700px"
+    width:"700px",
+    [theme.breakpoints.down("sm")]:{
+        marginBottom:theme.spacing(-5),
+    }
 },
 teamPic:{
     width:"150px",
     height:"150px"
 },
-teamMembers:{
+teamMembers1:{
     display:"flex",
-    flexWrap:"wrap",
+    
+    
+    justifyContent:"space-around",
+    marginTop:theme.spacing(8),
+    marginLeft:theme.spacing(20),
+    [theme.breakpoints.down("sm")]:{
+        display:"flex", 
+        alignItems:"center", 
+        flexDirection:"column",
+        marginLeft: theme.spacing(10), 
+        marginRight: theme.spacing(5),
+        
+        
+      }
+    
+}, 
+teamMembers2:{
+    display:"flex",
+    
     
     justifyContent:"space-around",
     marginTop:theme.spacing(8),
     marginLeft:theme.spacing(20),
     
-}, 
+    [theme.breakpoints.down("sm")]:{
+        display:"flex", 
+        alignItems:"center", 
+        flexDirection:"column",
+        
+        marginRight: theme.spacing(26),
+        marginTop: theme.spacing(-1),
+        
+      }
+    
+},
+teamMembers3:{
+    display:"flex",
+    
+    
+    justifyContent:"space-around",
+    marginTop:theme.spacing(8),
+    marginLeft:theme.spacing(20),
+    [theme.breakpoints.down("sm")]:{
+        display:"flex", 
+        alignItems:"center", 
+        flexDirection:"column",
+        marginRight: theme.spacing(26),
+        marginTop: theme.spacing(-1),
+        
+        
+      }
+    
+},
 member:{
    
     marginTop:theme.spacing(5),
+    [theme.breakpoints.down("sm")]:{
+        marginTop:theme.spacing(8),
+        marginLeft:theme.spacing(15)
+        
+      }
+    
 },
 title:{
-    color:"#9c27b0", 
+    color:"#5d2177", 
     fontFamily: ['Source Sans Pro', "sans-serif"  ],
     fontWeight:"7",
+    marginBottom:theme.spacing(3),
+    
 },
 infoText:{
-    color:"#9c27b0", 
+    color:"#5d2177", 
     fontFamily: ['Source Sans Pro', "sans-serif"  ],
+    width:"500px",
+    [theme.breakpoints.down("sm")]:{
+        marginLeft: theme.spacing(7), 
+        marginRight: theme.spacing(3),
+        width:"270px",
+        fontSize:"20px",
+      }
 },
 socials:{
     color: "white",
-    backgroundColor:"#7b1fa2", 
+    backgroundColor:"#5d2177", 
     borderRadius:"50%", 
     cursor:"pointer", 
     marginLeft: theme.spacing(1),
@@ -59,15 +125,29 @@ socials:{
 
 },
 name:{
- color: "#7b1fa2",
+ color: "#5d2177",
  fontFamily: ['Source Sans Pro', "sans-serif"  ],
  fontWeight:"bold",
- fontSize: theme.spacing(4)
+ fontSize: theme.spacing(6),
+ lineHeight : "55px" ,
+ [theme.breakpoints.down("sm")]:{
+    lineHeight : "55px" ,
+ }
 },
 jobTitle:{
-color: "#7b1fa2",
+color: "#5d2177",
 fontFamily: ['Source Sans Pro', "sans-serif"  ],
-fontSize: theme.spacing(3)
+fontSize: theme.spacing(3),
+[theme.breakpoints.down("sm")]:{
+    width:"300px",
+    marginRight:theme.spacing(9)
+  }
+},
+logoMern:{
+    
+    [theme.breakpoints.down("sm")]:{
+        marginBottom:theme.spacing(1),
+      }
 }
 
 }))
@@ -85,7 +165,7 @@ function Teams() {
                 </Typography>
 
             </div>
-            <div className={classes.teamMembers}>
+            <div className={classes.teamMembers1}>
                 <div className={classes.member}>
                 <Avatar 
                 className={classes.teamPic}
@@ -142,7 +222,7 @@ function Teams() {
 
 
 
-            <div style={{marginLeft:"200px"}} className={classes.teamMembers}>
+            <div style={{marginLeft:"200px"}} className={classes.teamMembers2}>
                 <div className={classes.member}>
                 <Avatar 
                 className={classes.teamPic}
@@ -199,7 +279,7 @@ function Teams() {
             </div>
 
 
-            <div style={{marginLeft:"200px"}} className={classes.teamMembers}>
+            <div style={{marginLeft:"200px"}} className={classes.teamMembers3}>
                 <div className={classes.member}>
                 <Avatar 
                 className={classes.teamPic}
@@ -235,6 +315,7 @@ function Teams() {
 
                     <div className={classes.member}>
                 <img 
+                className="logoMern"
                 style={{width:"300px"}}
                 src="/images/Logo-mep-def.png"
                 />

@@ -12,7 +12,11 @@ main: {
     backgroundSize: 'cover', 
     backgroundRepeat: 'no-repeat',
    
-       
+    [theme.breakpoints.down("sm")]:{
+        
+            marginTop:theme.spacing(3),
+    
+      }
         
 }, 
 about:{
@@ -20,11 +24,17 @@ about:{
     alignItems:"center",
     justifyContent: "space-around",
     marginTop:theme.spacing(5),
+    width:"65%",
+    marginLeft:theme.spacing(32),
+    marginTop:theme.spacing(15),
     [theme.breakpoints.down("sm")]:{
       display:"flex",
       flexDirection:"column",
-      marginTop:theme.spacing(10),
-      alignItems:"center"
+      
+      alignItems:"center",
+      width: theme.spacing(20),
+    
+      
     }
     
 },
@@ -34,7 +44,9 @@ about1:{
     justifyContent: "space-between",
     position:"relative", 
     [theme.breakpoints.down("sm")]:{
-        marginTop:theme.spacing(10),
+        marginTop:theme.spacing(2),
+        marginRight:theme.spacing(40), 
+        marginLeft:theme.spacing(3)
      
     }
 }, 
@@ -53,6 +65,7 @@ icon2:{
 aboutText:{
     marginLeft:theme.spacing(10),
     fontFamily: ['Source Sans Pro', "sans-serif"  ],
+    color:"#898e91"
    
 },
 aboutTextParagraph:{
@@ -60,7 +73,7 @@ aboutTextParagraph:{
    marginTop: theme.spacing(3)
 }, 
 title:{
-    color:"#9c27b0", 
+    color:"#ac3b69", 
     fontFamily: ['Sora', "sans-serif"],
     
 }
@@ -81,7 +94,11 @@ function Section1() {
            </div>
             <div className = {classes.aboutText}>
                 <h2 className={classes.title}>Meet people</h2>
-                <p className={classes.aboutTextParagraph}> In FindMeet app you can find interesting people from your smartphone, and invite them into the metaverse.</p>
+                <p  className={classes.aboutTextParagraph}> In FindMeet app you can find interesting people from your smartphone, and invite them into the metaverse.
+                <br/>
+                <br/>
+                <br/>
+                </p>
             </div>
             </div>
             <div className={classes.about1}>

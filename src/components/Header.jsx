@@ -18,24 +18,77 @@ const useStyles = makeStyles((theme) =>({
 
             height: theme.spacing(80),
         width: '100%',
-        marginBottom:theme.spacing(30)
+        marginBottom:theme.spacing(20)
             
           }
        
    
   }, 
+  container:{
+    width:"90%",
+    marginLeft:theme.spacing(20),
+    [theme.breakpoints.down("sm")]:{
+    marginRight:theme.spacing(5),
+    width:"15%",
+    marginBottom:theme.spacing(30)
+        
+      }
+  },
   menu:{
       display: "flex",
       alignItems:"center", 
       justifyContent:"space-around",
+      marginRight:theme.spacing(30),
+      [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(2),
+          
+        
+      } 
+
      
       
   },
+  logoHeader:{
+    marginTop:"30px", 
+    [theme.breakpoints.down("sm")]:{
+        position: "relative",
+        
+        width:"200px",
+        height:"auto",
+        
+        
+    }
+  },
+  logoItems:{
+    [theme.breakpoints.down("sm")]:{
+      left:"10%",
+      display:"flex",
+      justify:"flex-end",
+      marginRight:theme.spacing(-13)
+        
+    }
+  } ,
+  customMenu:{
+   
+    color:"white",
+    display:"none",
+    [theme.breakpoints.down("sm")]:{
+        display:"block", 
+        marginTop: theme.spacing(3),
+        cursor: "pointer",
+        
+      
+      }
+  }, 
   findmeetMenu:{
       display: "flex",
       alignItems:"center", 
       justifyContent:"space-between",
       fontFamily: ['Sora', "sans-serif"],
+      marginLeft:theme.spacing(30),
+      [theme.breakpoints.down("sm")]:{
+          
+      }
      
 
 
@@ -49,9 +102,7 @@ const useStyles = makeStyles((theme) =>({
       cursor:"pointer",
       textDecoration: "none",
   },
-  logoHeader:{
-    marginTop:"30px"
-  }, 
+  
   banner:{
       display: "flex",
       alignItems:"center",
@@ -108,7 +159,10 @@ const useStyles = makeStyles((theme) =>({
       fontFamily: ['Sora', "sans-serif"],
       [theme.breakpoints.down("sm")]:{
           marginTop:theme.spacing(10),
-        fontSize:"30px"
+        fontSize:"35px", 
+        marginBottom:theme.spacing(5),
+        width:"320px",
+        marginLeft:theme.spacing(7),
       }
 
   }, 
@@ -116,58 +170,68 @@ const useStyles = makeStyles((theme) =>({
     color: "white",
       fontFamily: ['Source Sans Pro', "sans-serif"  ],
       marginTop: theme.spacing(3),
+      textAlign:"center",
       marginBottom: theme.spacing(3),
+      [theme.breakpoints.down("sm")]:{
+    marginLeft:theme.spacing(5),
+      fontSize:"13px", 
+      width:"350px",
+     
+    }
   }, 
   bannerIcon:{
       marginTop: theme.spacing(6), 
       [theme.breakpoints.down("sm")]:{
         marginTop:theme.spacing(10),
-    
+        width:"500px",
+        margin:theme.spacing(2),
+        marginLeft:theme.spacing(2),
     }
       
   },
   socials:{
       position:"relative",
       color: "white",
-      backgroundColor:"#7b1fa2", 
+      backgroundColor:"#5d2177", 
       borderRadius:"50%", 
       cursor:"pointer", 
       marginLeft: theme.spacing(1),
-      top: theme.spacing(1),
+      top: theme.spacing(2),
+      width:theme.spacing(4),
+      height:theme.spacing(4),
 
   }, 
   telegram:{
     position:"relative",
     marginTop: theme.spacing(0),
     color: "white",
-    backgroundColor:"#7b1fa2", 
-    borderRadius:"10%", 
+    backgroundColor:"#5d2177", 
+    borderRadius:"20%", 
+   
     textTransform:"capitalize",
     boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(8),
+    
+    }
   },
   lightpapaerIcon:{
     marginTop: theme.spacing(0),
     color: "white",
     textTransform:"capitalize",
-    backgroundColor:"#ba68c8", 
+    backgroundColor:"#5d2177", 
     borderRadius:"10%", 
     boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
      display: "block",
      [theme.breakpoints.down("sm")]:{
         display:"none"
       }
-  }, 
-  customMenu:{
-    cursor: "pointer",
-    color:"white",
-    display:"none",
-    [theme.breakpoints.down("sm")]:{
-        display:"block"
-      }
-  }, 
+  },
+  
   menuItems:{
       textDecoration:"none"
-  }
+  },
+
  
 
 }))
@@ -185,11 +249,14 @@ function Header() {
 
     return (
         <div className={classes.main}>
+            <div className={classes.container}>
             <div className={classes.menu}>
-                <div className="logoItems">
+                <div className={classes.logoItems}>
                 <img src ="/images/L2.png" className={classes.logoHeader}></img>
                 </div>
                 <div className={classes.findmeetMenu}>
+                
+
                     <li className={classes.link}><a href="#" className={classes.textMenu}>Home</a></li>
                     <li className={classes.link}><a href="#HowItWorks"className={classes.textMenu}>How it Works</a></li>
                     <li className={classes.link}><a href="#tokenomics" className={classes.textMenu}>Tokenomics</a></li>
@@ -208,8 +275,9 @@ function Header() {
         aria-controls="basic-menu"
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
+       
                     />
+                    
 
       <Menu
         id="basic-menu"
@@ -275,6 +343,7 @@ function Header() {
                 </div>
                 </Fade>
 
+            </div>
             </div>
         </div>
     )

@@ -27,11 +27,26 @@ title:{
   
       color:"white",
       fontFamily: ['Sora', "sans-serif"],
+      [theme.breakpoints.down("sm")]:{
+        marginLeft: theme.spacing(7), 
+        marginRight: theme.spacing(5),
+        width:"300px"
+      }
     
   }, 
   body:{
     fontFamily: ['Source Sans Pro', "sans-serif"  ],
-    color:"white"
+    color:"white", 
+    textAlign:"center",
+    [theme.breakpoints.down("sm")]:{
+        [theme.breakpoints.down("sm")]:{
+            marginLeft: theme.spacing(1), 
+            width:"300px"
+        
+            
+           
+          }
+      }
   } 
 
 }))
@@ -48,10 +63,10 @@ function SectionToken() {
                     <img src="/images/Token111.png"/>
                     <img src="/images/Token333.png"/>
                 </div>
-                <Typography className={classes.body} variant="body2">$MEET is our deflationary token that has real utilities on FindMeet App and</Typography>
-                <Typography className={classes.body} variant="body2">Metaverse ecosystem. With $MEET user can upgrade their profiles, find specific</Typography>
-                <Typography className={classes.body} variant="body2">people, access to private content, get access to specific groups of people Buy</Typography>
-                <Typography className={classes.body} variant="body2">house and accessories and play to earn.</Typography>
+                <Typography className={classes.body} variant="body2">$MEET is our deflationary token that has real utilities on FindMeet App and
+                Metaverse ecosystem. With $MEET user can upgrade their profiles, find specific
+                people, access to private content, get access to specific groups of people Buy
+                house and accessories and play to earn.</Typography>
             </div>
             </Fade>
         </div>

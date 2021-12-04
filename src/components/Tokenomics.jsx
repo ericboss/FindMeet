@@ -15,19 +15,19 @@ main: {
         flexDirection: "column", 
         justifyContent: "space-between", // vertical
         alignItems: "center" ,
-        marginBottom: theme.spacing(30),
+        marginBottom: theme.spacing(40),
         [theme.breakpoints.down("sm")]:{
             
-            marginTop:theme.spacing(5),
-            
+            marginTop:theme.spacing(-1),
+            marginBottom: theme.spacing(5),
           }
 }, 
 graphico:{
     width: theme.spacing(140), 
         height: theme.spacing(85),
         [theme.breakpoints.down("sm")]:{
-            width: theme.spacing(70), 
-           height: theme.spacing(60),
+            width: theme.spacing(50), 
+           height: theme.spacing(40),
            marginLeft:theme.spacing(3)
           }
 }, 
@@ -54,36 +54,36 @@ tableGroup2:{
 }, 
 tabella1:{
     [theme.breakpoints.down("sm")]:{
-        width: theme.spacing(60), 
-       height: theme.spacing(60),
+        width: theme.spacing(30), 
+       height: theme.spacing(30),
        marginRight:theme.spacing(10)
      
       }
 },
 tabella2:{
     [theme.breakpoints.down("sm")]:{
-        width: theme.spacing(55), 
-       marginRight:theme.spacing(10)
+        width: theme.spacing(35), 
+       marginRight:theme.spacing(14)
      
       }
 },
 tabella3:{
     marginTop:theme.spacing(2),
     [theme.breakpoints.down("sm")]:{
-        width: theme.spacing(55), 
-       marginRight:theme.spacing(10)
+        width: theme.spacing(35), 
+       marginRight:theme.spacing(14)
      
       }
 },
 title:{
     marginTop:theme.spacing(6), 
     marginBottom: theme.spacing(6),
-    color:"#9c27b0", 
+    color:"#5d2177", 
     fontFamily: ['Source Sans Pro', "sans-serif"  ],
     fontWeight:"7",
     [theme.breakpoints.down("sm")]:{
         fontSize:"30px",
-       marginLeft:theme.spacing(8)
+       marginLeft:theme.spacing(4)
      
       }
 }, 
@@ -93,11 +93,11 @@ button:{
     position:"relative",
         marginTop: theme.spacing(0),
         color: "white",
-        backgroundColor:"#7b1fa2", 
+        backgroundColor:"#5d2177", 
         borderRadius:"10%", 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
         [theme.breakpoints.down("sm")]:{
-            marginLeft: theme.spacing(8), 
+            marginLeft: theme.spacing(4), 
             marginBottom: theme.spacing(8)
           }
       
@@ -110,7 +110,7 @@ function Tokenomics() {
     return (
         <div id="tokenomics" className={classes.main}>
             <Fade bottom>
-            <Typography variant="h3" className={classes.title}>Tokenomics</Typography>
+            <Typography variant="h2" className={classes.title}>Tokenomics</Typography>
             <img 
             className={classes.graphico}
             src = "/images/Grafico.jpg"/>
@@ -136,7 +136,7 @@ function Tokenomics() {
             <Typography
             id="lightpaper"
             className={classes.title}
-            variant="h3">Download The Lightpaper</Typography>
+            variant="h2">Download The Lightpaper</Typography>
 
                 <Button
                     className={classes.button}
