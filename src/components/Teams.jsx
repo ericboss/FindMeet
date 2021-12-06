@@ -375,7 +375,7 @@ function Teams() {
             <div className={classes.items}>
             <Avatar 
                 className={classes.teamPic}
-                src= "/images/jdpl.png"
+                src= "/images/cameron.png"
                 />
                 <Typography style={{width:"180%", marginLeft:"-40px"}} className={classes.name} variant="h5">Cameron Pheiffer</Typography>
                 <Typography style={{width:"150%", marginLeft:"-40px"}} className={classes.jobTitle} variant="body2">Game Developer & 3D Artist</Typography>

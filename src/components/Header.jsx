@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme) =>({
   textMenu:{
       color: "white",
       marginRight:theme.spacing(4), 
-      cursor:"pointer",
+      pointerEvents: "auto",
       textDecoration: "none",
       
       fontWeight:"100"
