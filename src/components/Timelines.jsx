@@ -37,7 +37,8 @@ timelineDot:{
   color:"#ffff"
 },
 titleBlock:{
-  fontFamily: ['Sora', "sans-serif"],
+  fontFamily:"Sora, sans-serif",
+  fontWeight:"100",
   color:"white",
   [theme.breakpoints.down("sm")]:{
     
@@ -46,7 +47,8 @@ titleBlock:{
   }
 },
 timeRight:{
-  fontFamily: ['Sora', "sans-serif"],
+  fontFamily:"Sora, sans-serif",
+        fontWeight:"500",
   color:"white",
   textAlign:"left", 
   [theme.breakpoints.down("sm")]:{
@@ -55,7 +57,8 @@ timeRight:{
   }
 },
 eventRight:{
-  fontFamily: ['Source Sans Pro', "sans-serif"  ],
+  fontFamily:"Sora, sans-serif",
+  fontWeight:"100",
   color:"white",
   fontWeight:"7",
   textAlign:"left",
@@ -68,7 +71,8 @@ eventRight:{
 },
 
 timeLeft:{
-  fontFamily: ['Sora', "sans-serif"],
+  fontFamily:"Sora, sans-serif",
+  fontWeight:"500",
   color:"white",
   textAlign:"left", 
   [theme.breakpoints.down("sm")]:{
@@ -78,7 +82,8 @@ timeLeft:{
   }
 },
 eventLeft:{
-  fontFamily: ['Source Sans Pro', "sans-serif"  ],
+  fontFamily:"Sora, sans-serif",
+  fontWeight:"100",
   color:"white",
   fontWeight:"7",
   textAlign:"left",
@@ -135,10 +140,10 @@ function Timelines() {
                       - Deals with potential partners<br/>
           </Typography>
         </TimelineOppositeContent>
-        <TimelineSeparator classesName={classes.connector}>
+        <TimelineSeparator >
           <TimelineConnector />
            <div className={classes.background}>
-            <img className={classes.timeLineImg} src="/images/coin-stack.png"/>
+            <img style={{width:"50px", height: "auto", marginRight:"3px", marginBottom:"5px"}} className={classes.timeLineImg} src="/images/coin-stack.png"/>
            </div>
           <TimelineConnector classesName={classes.connector} />
         </TimelineSeparator>
@@ -168,6 +173,7 @@ function Timelines() {
               - Building Findmeet Game, Houses Lands and Characters<br/>
               - Internal Farming<br/>
               - Starting developing NFTs Marketplace  
+              <br/>
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -178,16 +184,21 @@ function Timelines() {
           variant="body2"
           color="text.secondary"
         >
+          <br/>
           <Typography className={classes.timeLeft} variant="h4">Q2 - 2022</Typography>
           <Typography className={classes.eventLeft}>- Releasing NFTs Marketplace<br/>
                       - Partnership in the making<br/>
-                      
+                      <br/>
+                      <br/>
+                      <br/>
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <div style={{width:"100px"}} className={classes.background}>
-          <img className={classes.timeLineImg}
+          <div style={{height:"75px",width:"auto"}} className={classes.background}>
+          <img 
+          style={{width:"75px", height: "auto", marginTop : "17px",marginLeft:"5px" }}
+          className={classes.timeLineImg}
             src="/images/NFT.png"
             />
             </div>
@@ -201,8 +212,8 @@ function Timelines() {
       <TimelineItem>
         <TimelineSeparator>
           <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-          <div style={{width:"90px"}} className={classes.background}>
-          <img style={{marginTop:"5px"}} className={classes.timeLineImg}
+          <div style={{width:"85px", height:"auto"}} className={classes.background}>
+          <img style={{marginTop:"17px",marginLeft:"17px", width:"50px", height:"auto"}} className={classes.timeLineImg}
             src="/images/phone.png"
             />
             </div>
@@ -250,7 +261,9 @@ function Timelines() {
         <TimelineSeparator>
           <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
           <div className={classes.background}>
-          <img className={classes.timeLineImg}
+          <img 
+          style={{width:"42px", height:"auto", marginBottom:"10px"}}
+          className={classes.timeLineImg}
             src="/images/star.png"
             />
             </div>
@@ -264,6 +277,7 @@ function Timelines() {
           <Typography className={classes.eventRight}>
               - Integrating Findmeet App with Findmeet Game.<br/>
               - Releasing new features for Findmeet Users.<br/>
+              <br/>
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -277,13 +291,17 @@ function Timelines() {
           <Typography variant="h4" className={classes.timeLeft}>Q2-2023</Typography>
           <Typography className={classes.eventLeft}>- Sponsorship, PR, Marketing operations<br/>
                       - Releasing Findmeet Game<br/>
+                      <br/>
+                      <br/>
                      
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
           <div className={classes.background}>
-          <img className={classes.timeLineImg}
+          <img 
+          style={{width:"45px", height:"auto"}}
+          className={classes.timeLineImg}
             src="/images/micro.png"
             />
             </div>
@@ -297,8 +315,9 @@ function Timelines() {
       <TimelineItem>
         <TimelineSeparator>
           <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
-          <div style={{ width:"90px"}} className={classes.background}>
-          <img style={{marginLeft:"5px"}}  className={classes.timeLineImg} 
+          <div style={{ width:"80px", height:"auto"}} className={classes.background}>
+          <img style={{marginLeft:"5px"}} 
+           className={classes.timeLineImg} 
             src="/images/question.png"
           
             />
@@ -312,6 +331,9 @@ function Timelines() {
           </Typography>
           <Typography className={classes.eventRight}>
               - The show will go on ...<br/>
+              <br/>
+              <br/>
+              <br/>
               
           </Typography>
         </TimelineContent>

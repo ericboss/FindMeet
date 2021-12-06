@@ -6,13 +6,13 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) =>({
     section:{
         backgroundImage: `url('./images/features-bg.png')`,
-        backgroundPosition: 'bottom', 
-        backgroundSize: 'cover', 
+    backgroundPosition: 'bottom',
+    backgroundSize: 'cover',  
       
         
     },
     container:{
-        marginTop:theme.spacing(-8),
+        marginTop:theme.spacing(1),
         display: "flex", 
         alignItems:"center",
         justifyContent:"space-around",
@@ -34,8 +34,12 @@ const useStyles = makeStyles((theme) =>({
         }
     },
     sectionText:{
-       width:"400px" , 
-       fontFamily: ['Source Sans Pro', "sans-serif"  ],
+       width: theme.spacing(75) , 
+       fontFamily:"Sora, sans-serif",
+       fontWeight:"500",
+       alignText:"left",
+       fontSize:theme.spacing(1.8),
+      marginTop: theme.spacing(3),
        marginBottom:theme.spacing(3),
        color:"#5d2177",
        [theme.breakpoints.down("sm")]:{
@@ -47,10 +51,9 @@ const useStyles = makeStyles((theme) =>({
     },
     title:{
         color:"#ac3b69", 
-        fontFamily: ['Source Sans Pro', "sans-serif"  ],
-        fontWeight:"7",
-        fontSize:"60px",
-        width:"70%",
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"100",
+        fontSize:theme.spacing(7),
         lineHeight : "55px" , 
         marginBottom:theme.spacing(3), 
         [theme.breakpoints.down("sm")]:{
@@ -60,12 +63,17 @@ const useStyles = makeStyles((theme) =>({
           }
     }, 
     telegram:{
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"400",
         position:"relative",
         marginTop: theme.spacing(0),
         color: "white",
         backgroundColor:"#5d2177", 
         textTransform:"capitalize",
-        borderRadius:"10%", 
+        borderTopLeftRadius: "50%60px",
+    borderBottomLeftRadius: "50%60px",  
+    borderTopRightRadius: "50%60px",
+    borderBottomRightRadius: "50%60px", 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
         [theme.breakpoints.down("sm")]:{
             marginLeft: theme.spacing(10), 
@@ -80,8 +88,9 @@ const useStyles = makeStyles((theme) =>({
           }
       },
       sectionImgSub:{
-        width: theme.spacing(70), 
-        height  : theme.spacing(70),
+        width: theme.spacing(60), 
+        height  : "auto",
+        marginRight:theme.spacing(11),
         [theme.breakpoints.down("sm")]:{
             width: theme.spacing(45), 
            height  : theme.spacing(45),
@@ -94,15 +103,17 @@ const useStyles = makeStyles((theme) =>({
       
 }))
 
-function SectionIconRight({title, text, image_url}) {
+function Section2() {
     const classes = useStyles()
     return (
         <div className={classes.section}>
             <div className={classes.container}>
             <Fade bottom>
             <div className={classes.sectionInfo}>
-                <h1 className={classes.title}>{title}</h1>
-                <p className={classes.sectionText}>{text}</p>
+                <h1 className={classes.title}>Huge Opportunity</h1>
+                <p className={classes.sectionText}>With the spread of various social network on a global scale, humans realized that finding new friends or lovely mates has never been so much easier.
+           Many families have grown all over the world thanks to dating apps and social network."
+           </p>
                     <Button
                     startIcon={<Send />}
                     variant="contained"
@@ -112,7 +123,7 @@ function SectionIconRight({title, text, image_url}) {
                     </Button>
             </div>
             <div className={classes.sectionImg}>
-            <img className={classes.sectionImgSub}src ={image_url}></img>
+            <img className={classes.sectionImgSub}src ="/images/ImageHUGE.png"></img>
             </div>
             </Fade>
             </div>
@@ -120,8 +131,4 @@ function SectionIconRight({title, text, image_url}) {
     )
 }
 
-export default SectionIconRight
-
-
-
-
+export default Section2

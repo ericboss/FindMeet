@@ -7,12 +7,13 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) =>({
   main:{
     backgroundImage: `url('./images/BG.png')`,
-        backgroundPosition: 'center', 
-        backgroundSize: 'cover', 
+        backgroundPosition: 'bottom',  
         backgroundRepeat: 'no-repeat',
         // margin: 'auto',
         height: theme.spacing(120),
         width: '100%',
+        top:0,
+        margin : 0,
         borderRadius: 8,
         [theme.breakpoints.down("sm")]:{
 
@@ -84,7 +85,7 @@ const useStyles = makeStyles((theme) =>({
       display: "flex",
       alignItems:"center", 
       justifyContent:"space-between",
-      fontFamily: ['Sora', "sans-serif"],
+      fontFamily: "Sora, sans-serif",
       marginLeft:theme.spacing(30),
       [theme.breakpoints.down("sm")]:{
           
@@ -101,6 +102,8 @@ const useStyles = makeStyles((theme) =>({
       marginRight:theme.spacing(4), 
       cursor:"pointer",
       textDecoration: "none",
+      
+      fontWeight:"100"
   },
   
   banner:{
@@ -122,8 +125,10 @@ const useStyles = makeStyles((theme) =>({
   },
   bannerImg:{
       
-    width:"1000px", 
-    height  : "1000px", 
+    width: theme.spacing(90), 
+    height  : "auto", 
+    marginRight: theme.spacing(45),
+    marginTop: theme.spacing(-35),
     [theme.breakpoints.down("sm")]:{
         marginLeft:theme.spacing(60),
         marginTop: theme.spacing(-20)
@@ -131,8 +136,9 @@ const useStyles = makeStyles((theme) =>({
       }
   },
   bannerImgSub:{
-    width:theme.spacing(100), 
-    height  : theme.spacing(100),
+    width:theme.spacing(110), 
+    height  : "auto",
+    
     [theme.breakpoints.down("sm")]:{
         width: theme.spacing(55), 
        height  : theme.spacing(55),
@@ -142,10 +148,10 @@ const useStyles = makeStyles((theme) =>({
       }
   } ,
   bannerInfo:{
-    width:"500px", 
-    height  : "500px" , 
+    width: theme.spacing(100), 
+    height  : theme.spacing(100) , 
     marginLeft:theme.spacing(10),
-    marginTop:theme.spacing(-15) 
+    marginTop:theme.spacing(20) 
   }, 
   link:{
     listStyle: "none",
@@ -156,7 +162,11 @@ const useStyles = makeStyles((theme) =>({
   },
   title:{
       color: "white",
-      fontFamily: ['Sora', "sans-serif"],
+      fontFamily:"Sora, sans-serif",
+      fontWeight:"100",
+      fontSize:theme.spacing(6),
+     
+      
       [theme.breakpoints.down("sm")]:{
           marginTop:theme.spacing(10),
         fontSize:"35px", 
@@ -168,9 +178,10 @@ const useStyles = makeStyles((theme) =>({
   }, 
   body:{
     color: "white",
-      fontFamily: ['Source Sans Pro', "sans-serif"  ],
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"400",
       marginTop: theme.spacing(3),
-      textAlign:"center",
+      textAlign:"left",
       marginBottom: theme.spacing(3),
       [theme.breakpoints.down("sm")]:{
     marginLeft:theme.spacing(5),
@@ -181,6 +192,7 @@ const useStyles = makeStyles((theme) =>({
   }, 
   bannerIcon:{
       marginTop: theme.spacing(6), 
+      
       [theme.breakpoints.down("sm")]:{
         marginTop:theme.spacing(10),
         width:"500px",
@@ -206,7 +218,11 @@ const useStyles = makeStyles((theme) =>({
     marginTop: theme.spacing(0),
     color: "white",
     backgroundColor:"#5d2177", 
-    borderRadius:"20%", 
+  
+    borderTopLeftRadius: "50%60px",
+    borderBottomLeftRadius: "50%60px",  
+    borderTopRightRadius: "50%60px",
+    borderBottomRightRadius: "50%60px", 
    
     textTransform:"capitalize",
     boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
@@ -220,7 +236,11 @@ const useStyles = makeStyles((theme) =>({
     color: "white",
     textTransform:"capitalize",
     backgroundColor:"#5d2177", 
-    borderRadius:"10%", 
+    borderTopLeftRadius: "50%60px",
+    borderBottomLeftRadius: "50%60px",  
+    borderTopRightRadius: "50%60px",
+    borderBottomRightRadius: "50%60px",  
+    fontWeight:"200",
     boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
      display: "block",
      [theme.breakpoints.down("sm")]:{
@@ -231,7 +251,10 @@ const useStyles = makeStyles((theme) =>({
   menuItems:{
       textDecoration:"none"
   },
-
+ti:{
+  fontFamily: "Sora, sans-serif",
+  fontWeight:"100"
+}
  
 
 }))
@@ -267,7 +290,7 @@ function Header() {
                     className={classes.lightpapaerIcon}
                     href="#lightpaper"
                      >
-                    Demo LightPaper
+                    <p className={classes.ti}>Demo LightPaper</p>
                     </Button >
                     <MenuIcon
                     className={classes.customMenu}   
@@ -305,7 +328,9 @@ function Header() {
                 <Fade bottom>
                 <div className={classes.bannerInfo}>
                     <div className = {classes.bannerText}>
-                     <Typography className= {classes.title} variant="h2">Find & Meet people in the metaverse</Typography>
+                     <Typography className= {classes.title} variant="body3" >Find & Meet people</Typography>
+                     <br/>
+                     <Typography className= {classes.title} variant="body3" >in the metaverse</Typography>
                      <Typography className= {classes.body} variant="body2">FindMeet is the first decentralized dating & gaming social network in the metaverse where users can create their own world, find new people and meet them at the comfort of their customized home. </Typography>
                     </div>
                     <div classname ={classes.bannerIcon}>

@@ -23,8 +23,9 @@ main: {
           }
 }, 
 graphico:{
-    width: theme.spacing(140), 
-        height: theme.spacing(85),
+    width: theme.spacing(110), 
+        height: "auto",
+        marginBottom: theme.spacing(5),
         [theme.breakpoints.down("sm")]:{
             width: theme.spacing(50), 
            height: theme.spacing(40),
@@ -52,11 +53,14 @@ tableGroup2:{
     marginTop:theme.spacing(5)
       }
 }, 
+tableGroup1:{
+marginLeft: theme.spacing(4)
+},
 tabella1:{
     [theme.breakpoints.down("sm")]:{
-        width: theme.spacing(30), 
-       height: theme.spacing(30),
-       marginRight:theme.spacing(10)
+        width: theme.spacing(25), 
+       height: "auto",
+       marginRight:theme.spacing(8)
      
       }
 },
@@ -68,7 +72,7 @@ tabella2:{
       }
 },
 tabella3:{
-    marginTop:theme.spacing(2),
+    marginTop:theme.spacing(4),
     [theme.breakpoints.down("sm")]:{
         width: theme.spacing(35), 
        marginRight:theme.spacing(14)
@@ -79,8 +83,9 @@ title:{
     marginTop:theme.spacing(6), 
     marginBottom: theme.spacing(6),
     color:"#5d2177", 
-    fontFamily: ['Source Sans Pro', "sans-serif"  ],
-    fontWeight:"7",
+    fontFamily:"Sora, sans-serif",
+        fontWeight:"100",
+      
     [theme.breakpoints.down("sm")]:{
         fontSize:"30px",
        marginLeft:theme.spacing(4)
@@ -89,19 +94,25 @@ title:{
 }, 
 button:{
     borderRadius:"10", 
+    fontSize: theme.spacing(3),
     marginBottom:theme.spacing(5),
+    
     position:"relative",
         marginTop: theme.spacing(0),
         color: "white",
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"400",
         backgroundColor:"#5d2177", 
-        borderRadius:"10%", 
+        textTransform:"capitalize", 
+        borderRadius:"20%", 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
         [theme.breakpoints.down("sm")]:{
             marginLeft: theme.spacing(4), 
             marginBottom: theme.spacing(8)
           }
       
-}
+},
+
 
 
 }))
@@ -139,6 +150,7 @@ function Tokenomics() {
             variant="h2">Download The Lightpaper</Typography>
 
                 <Button
+                   
                     className={classes.button}
                     startIcon={<SystemUpdateAlt />}
                     variant="contained"

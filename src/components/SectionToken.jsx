@@ -8,14 +8,15 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) =>({
 main: {
     backgroundImage: `url('./images/CTA Bg.png')`,
-        backgroundPosition: 'center', 
-        backgroundSize: 'cover', 
-        backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',  
+    backgroundRepeat: 'no-repeat',
         width: "100%",
         height:theme.spacing(95),
         display:"flex",
         flexDirection: "column", 
         alignItems: "center", 
+        marginTop: theme.spacing(25),
+        marginBottom: theme.spacing(15),
 },
 items:{
     marginTop: theme.spacing(20),
@@ -26,7 +27,8 @@ items:{
 title:{
   
       color:"white",
-      fontFamily: ['Sora', "sans-serif"],
+      fontFamily:"Sora, sans-serif",
+        fontWeight:"100",
       [theme.breakpoints.down("sm")]:{
         marginLeft: theme.spacing(7), 
         marginRight: theme.spacing(5),
@@ -34,9 +36,16 @@ title:{
       }
     
   }, 
+  meet:{
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"500",
+  },
   body:{
-    fontFamily: ['Source Sans Pro', "sans-serif"  ],
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"400",
+    fontSize:theme.spacing(1.8),
     color:"white", 
+    width: theme.spacing(75),
     textAlign:"center",
     [theme.breakpoints.down("sm")]:{
         [theme.breakpoints.down("sm")]:{
@@ -57,7 +66,7 @@ function SectionToken() {
         <div id="meetToken"className={classes.main}>
             <Fade bottom>
             <div className={classes.items}>
-                <Typography className={classes.title} variant="h4"> The $MEET Token</Typography>
+                <Typography className={classes.title} variant="h4"> The <span className={classes.meet}>$MEET</span> Token</Typography>
                 <div className={classes.images}>
                     <img src="/images/Token222.png"/>
                     <img src="/images/Token111.png"/>

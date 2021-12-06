@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) =>({
         display: "flex", 
         alignItems:"center",
         justifyContent:"space-around",
+        marginTop: theme.spacing(7),
         [theme.breakpoints.down("sm")]:{
             display:"flex",
             flexDirection:"column",
@@ -25,8 +26,11 @@ const useStyles = makeStyles((theme) =>({
         marginRight:theme.spacing(2),
     },
     sectionText:{
-       width:"400px" , 
-       fontFamily: ['Source Sans Pro', "sans-serif"  ],
+       width: theme.spacing(75) , 
+       fontFamily:"Sora, sans-serif",
+       fontWeight:"500",
+       alignItems: "left",
+       fontSize:theme.spacing(1.8),
        marginBottom:theme.spacing(3),
        color:"#5d2177", 
        [theme.breakpoints.down("sm")]:{
@@ -39,11 +43,10 @@ const useStyles = makeStyles((theme) =>({
     },
     title:{
         color:"#ac3b69", 
-        fontFamily: ['Source Sans Pro', "sans-serif"  ],
-        fontWeight:"7",
-        fontSize:"60px",
-        width:"70%",
-        lineHeight : "55px" , 
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"100",
+        fontSize:theme.spacing(7),
+        width:"70%", 
         marginBottom:theme.spacing(3), 
         [theme.breakpoints.down("sm")]:{
             width:theme.spacing(35),
@@ -59,11 +62,13 @@ const useStyles = makeStyles((theme) =>({
       item:{
         marginLeft: theme.spacing(1), 
         marginBottom: theme.spacing(1),
-        fontFamily: ['Source Sans Pro', "sans-serif"  ], 
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"500",
+        lineHeight: theme.spacing(8),
       },
       sectionImg:{
           display:"block",
-       marginLeft:theme.spacing(25),
+       marginLeft:theme.spacing(20),
        [theme.breakpoints.down("sm")]:{
         display:"none"
        
@@ -71,10 +76,12 @@ const useStyles = makeStyles((theme) =>({
       }
       },
        sectionImgSub:{
-        width: theme.spacing(50), 
-        height  : theme.spacing(50),
+        width: theme.spacing(65),
+        height  : theme.spacing(53),
+       
+
         [theme.breakpoints.down("sm")]:{
-            width: theme.spacing(55), 
+            width: theme.spacing(60), 
            height  : theme.spacing(55),
            marginBottom: theme.spacing(5),
           
@@ -84,7 +91,7 @@ const useStyles = makeStyles((theme) =>({
       },
       
       icon:{
-        width:theme.spacing(2),
+        width:theme.spacing(3),
         [theme.breakpoints.down("sm")]:{
             width:theme.spacing(3),
             height:"auto"
@@ -93,8 +100,13 @@ const useStyles = makeStyles((theme) =>({
       }, 
      
       item:{
+        fontFamily:"Sora, sans-serif",
+       fontWeight:"500",
           color:"#5d2177",
+          lineHeight: theme.spacing(0.2),
           marginLeft:theme.spacing(2),
+          marginTop:theme.spacing(1),
+          
         [theme.breakpoints.down("sm")]:{
             width:"295px" ,
             fontSize:"18px",
@@ -126,7 +138,7 @@ const useStyles = makeStyles((theme) =>({
       }
 }))
 
-function SectionIconLeftList() {
+function Section3() {
     const classes = useStyles()
     return (
         <div className={classes.section}>
@@ -167,4 +179,4 @@ function SectionIconLeftList() {
     )
 }
 
-export default SectionIconLeftList
+export default Section3

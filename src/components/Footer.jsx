@@ -4,9 +4,8 @@ import { Facebook, Instagram, Reddit, Twitter } from '@material-ui/icons'
 
 const useStyles = makeStyles((theme) =>({
 main: {
-    backgroundImage: `url('./images/BG2.png')`,
-        backgroundPosition: 'center', 
-        backgroundSize: 'cover', 
+    backgroundImage: `url('./images/BG.png')`,
+        backgroundPosition: 'top center', 
         backgroundRepeat: 'no-repeat',
         width: "100%", 
         height: theme.spacing(35), 
@@ -17,11 +16,13 @@ main: {
        
 }, 
 socials:{
-    display: "flex"
+    display: "flex",
+    marginTop: theme.spacing(2),
+    
 },
 subSocials:{
     color: "white",
-    backgroundColor:"#7b1fa2", 
+    backgroundColor:"#5d2177", 
     borderRadius:"50%", 
     cursor:"pointer", 
     marginLeft: theme.spacing(1),
@@ -34,6 +35,9 @@ items:{
     display:"flex",
         flexDirection: "column", 
         alignItems: "center", 
+},
+logoFooter:{
+    marginBotton:theme.spacing(1)
 }
 
 }))

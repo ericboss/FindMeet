@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) =>({
         display: "flex", 
         alignItems:"center",
         justifyContent:"space-around",
-        width:"65%",
+    
         marginLeft:theme.spacing(40),
         [theme.breakpoints.down("sm")]:{
             display:"flex",
@@ -27,15 +27,18 @@ const useStyles = makeStyles((theme) =>({
 
     },
     sectionInfo:{
-        
+        width: theme.spacing(30),
         marginRight:theme.spacing(20),
         [theme.breakpoints.down("sm")]:{
             marginRight: theme.spacing(55)
         }
     },
     sectionText:{
-       width:"400px" , 
-       fontFamily: ['Source Sans Pro', "sans-serif"  ],
+       width:theme.spacing(70) , 
+       fontFamily:"Sora, sans-serif",
+       fontWeight:"500",
+       textAlign: "left",
+       fontSize:theme.spacing(1.8),
        marginBottom:theme.spacing(3),
        color:"#5d2177",
        [theme.breakpoints.down("sm")]:{
@@ -47,12 +50,12 @@ const useStyles = makeStyles((theme) =>({
     },
     title:{
         color:"#ac3b69", 
-        fontFamily: ['Source Sans Pro', "sans-serif"  ],
-        fontWeight:"7",
-        fontSize:"60px",
-        width:"70%",
-        lineHeight : "55px" , 
-        marginBottom:theme.spacing(3), 
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"100",
+        fontSize:theme.spacing(7.2),
+        lineHeight : theme.spacing(0.15) , 
+        width: theme.spacing(90),
+        marginBottom:theme.spacing(1), 
         [theme.breakpoints.down("sm")]:{
             width:theme.spacing(35),
             marginLeft: theme.spacing(4), 
@@ -61,11 +64,16 @@ const useStyles = makeStyles((theme) =>({
     }, 
     telegram:{
         position:"relative",
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"400",
         marginTop: theme.spacing(0),
         color: "white",
         backgroundColor:"#5d2177", 
         textTransform:"capitalize",
-        borderRadius:"10%", 
+        borderTopLeftRadius: "50%60px",
+    borderBottomLeftRadius: "50%60px",  
+    borderTopRightRadius: "50%60px",
+    borderBottomRightRadius: "50%60px", 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
         [theme.breakpoints.down("sm")]:{
             marginLeft: theme.spacing(10), 
@@ -80,8 +88,8 @@ const useStyles = makeStyles((theme) =>({
           }
       },
       sectionImgSub:{
-        width: theme.spacing(70), 
-        height  : theme.spacing(70),
+        
+        marginBottom: theme.spacing(9),
         [theme.breakpoints.down("sm")]:{
             width: theme.spacing(45), 
            height  : theme.spacing(45),
@@ -94,15 +102,19 @@ const useStyles = makeStyles((theme) =>({
       
 }))
 
-function SectionIconRight({title, text, image_url}) {
+function Section4() {
     const classes = useStyles()
     return (
         <div className={classes.section}>
             <div className={classes.container}>
             <Fade bottom>
             <div className={classes.sectionInfo}>
-                <h1 className={classes.title}>{title}</h1>
-                <p className={classes.sectionText}>{text}</p>
+                <h1 className={classes.title}>Find people instantly</h1>
+                <p className={classes.sectionText}>With FindMeet app users can find people around them, or around the
+           world instantly, based on interest, passions, or needs.
+              <br/>
+              <br/>
+           Everything it's easy to use for everyone on thier smartphone with FindMeet app.</p>
                     <Button
                     startIcon={<Send />}
                     variant="contained"
@@ -112,7 +124,7 @@ function SectionIconRight({title, text, image_url}) {
                     </Button>
             </div>
             <div className={classes.sectionImg}>
-            <img className={classes.sectionImgSub}src ={image_url}></img>
+            <img className={classes.sectionImgSub}src ="/images/dat1.png"></img>
             </div>
             </Fade>
             </div>
@@ -120,8 +132,4 @@ function SectionIconRight({title, text, image_url}) {
     )
 }
 
-export default SectionIconRight
-
-
-
-
+export default Section4

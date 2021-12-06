@@ -8,10 +8,9 @@ import SectionInter from './SectionInter'
 const useStyles = makeStyles((theme) =>({
 main: {
     backgroundImage: `url('./images/features-bg.png')`,
-    backgroundPosition: 'center', 
-    backgroundSize: 'cover', 
-    backgroundRepeat: 'no-repeat',
-   
+    backgroundPosition: 'bottom center', 
+    backgroundSize: 'cover',  
+    marginTop:theme.spacing(20),
     [theme.breakpoints.down("sm")]:{
         
             marginTop:theme.spacing(3),
@@ -64,17 +63,21 @@ icon2:{
 },
 aboutText:{
     marginLeft:theme.spacing(10),
-    fontFamily: ['Source Sans Pro', "sans-serif"  ],
-    color:"#898e91"
+    
+    color:"#898e91",
+    textAlign:"left",
    
 },
 aboutTextParagraph:{
-   width:"200px", 
-   marginTop: theme.spacing(3)
+   width:"250px", 
+   marginTop: theme.spacing(2),
+   fontFamily:"Sora, sans-serif",
+    fontWeight:"500",
 }, 
 title:{
     color:"#ac3b69", 
-    fontFamily: ['Sora', "sans-serif"],
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"400",
     
 }
 

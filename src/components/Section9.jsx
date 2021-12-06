@@ -6,13 +6,13 @@ import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) =>({
     section:{
         backgroundImage: `url('./images/features-bg.png')`,
-        backgroundPosition: 'bottom', 
+        backgroundPosition: 'center', 
         backgroundSize: 'cover', 
-      
+        backgroundRepeat: 'no-repeat',
+        marginTop: theme.spacing(25),
         
     },
     container:{
-        marginTop:theme.spacing(-8),
         display: "flex", 
         alignItems:"center",
         justifyContent:"space-around",
@@ -22,66 +22,72 @@ const useStyles = makeStyles((theme) =>({
             display:"flex",
             flexDirection:"column",
             marginTop:theme.spacing(5),
-            alignItems:"center"
+            alignItems:"center",
+            flexDirection: "column-reverse"
           }
-
     },
     sectionInfo:{
-        
-        marginRight:theme.spacing(20),
+        marginTop: theme.spacing(5),
+        marginLeft:theme.spacing(10),
         [theme.breakpoints.down("sm")]:{
-            marginRight: theme.spacing(55)
+            marginRight: theme.spacing(80)
         }
     },
     sectionText:{
-       width:"400px" , 
-       fontFamily: ['Source Sans Pro', "sans-serif"  ],
+        width: theme.spacing(68) , 
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"500",
+        textAlign: "left",
+        fontSize:theme.spacing(1.8),
        marginBottom:theme.spacing(3),
-       color:"#5d2177",
+       color:"#5d2177", 
        [theme.breakpoints.down("sm")]:{
-        width:"260px", 
-        marginLeft: theme.spacing(4),
-        
-        
+        marginRight:theme.spacing(5),
+        marginLeft: theme.spacing(5), 
+        width:"270px"
       }
     },
     title:{
         color:"#ac3b69", 
-        fontFamily: ['Source Sans Pro', "sans-serif"  ],
-        fontWeight:"7",
-        fontSize:"60px",
-        width:"70%",
-        lineHeight : "55px" , 
-        marginBottom:theme.spacing(3), 
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"100",
+        fontSize:theme.spacing(6.5),
+        width:theme.spacing(80),
+        marginBottom:theme.spacing(1), 
         [theme.breakpoints.down("sm")]:{
             width:theme.spacing(35),
-            marginLeft: theme.spacing(4), 
-            marginRight: theme.spacing(7), 
+            marginLeft: theme.spacing(8),
+            
           }
     }, 
     telegram:{
         position:"relative",
         marginTop: theme.spacing(0),
         color: "white",
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"400",
         backgroundColor:"#5d2177", 
         textTransform:"capitalize",
-        borderRadius:"10%", 
-        boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+        borderTopLeftRadius: "50%60px",
+        borderBottomLeftRadius: "50%60px",  
+        borderTopRightRadius: "50%60px",
+        borderBottomRightRadius: "50%60px", 
+        boxShadow: "1px 1px 5px 6px rgba(93,33,119,0.68) -webkit-box-shadow: 1px 1px 5px 6px rgba(93,33,119,0.68) -moz-box-shadow: 1px 1px 5px 6px rgba(93,33,119,0.68)",
         [theme.breakpoints.down("sm")]:{
-            marginLeft: theme.spacing(10), 
-            marginRight: theme.spacing(8)
+            marginLeft: theme.spacing(13), 
+            marginRight: theme.spacing(10), 
+            marginBottom: theme.spacing(5)
           }
       },
       sectionImg:{
-          marginTop: theme.spacing(8),
-          [theme.breakpoints.down("sm")]:{
+        [theme.breakpoints.down("sm")]:{
            
             marginRight: theme.spacing(55)
           }
       },
       sectionImgSub:{
-        width: theme.spacing(70), 
-        height  : theme.spacing(70),
+        width: "auto", 
+        height  : theme.spacing(55),
         [theme.breakpoints.down("sm")]:{
             width: theme.spacing(45), 
            height  : theme.spacing(45),
@@ -90,19 +96,23 @@ const useStyles = makeStyles((theme) =>({
            
            
           }
-      } 
-      
+      }
 }))
 
-function SectionIconRight({title, text, image_url}) {
+function Section9() {
     const classes = useStyles()
     return (
+
         <div className={classes.section}>
-            <div className={classes.container}>
             <Fade bottom>
+                <div className= {classes.container}>
+            <div className={classes.sectionImg}>
+            <img className={classes.sectionImgSub}src ="/images/et1.png"></img>
+            </div>
+
             <div className={classes.sectionInfo}>
-                <h1 className={classes.title}>{title}</h1>
-                <p className={classes.sectionText}>{text}</p>
+                <h1 className={classes.title}>NFT Anonymous Login</h1>
+                <p className={classes.sectionText}>Users data is really important.FindMeet have a unique function for LOGIN with data stored which make FindMeet safe and anonymous, for those who needs.</p>
                     <Button
                     startIcon={<Send />}
                     variant="contained"
@@ -111,17 +121,11 @@ function SectionIconRight({title, text, image_url}) {
                     Join Telegram
                     </Button>
             </div>
-            <div className={classes.sectionImg}>
-            <img className={classes.sectionImgSub}src ={image_url}></img>
             </div>
             </Fade>
-            </div>
+            
         </div>
     )
 }
 
-export default SectionIconRight
-
-
-
-
+export default Section9
