@@ -13,7 +13,7 @@ main: {
     marginTop:theme.spacing(20),
     [theme.breakpoints.down("sm")]:{
         
-            marginTop:theme.spacing(3),
+            marginTop:theme.spacing(25),
     
       }
         
@@ -25,11 +25,11 @@ about:{
     marginTop:theme.spacing(5),
     width:"65%",
     marginLeft:theme.spacing(32),
-    marginTop:theme.spacing(15),
+    
     [theme.breakpoints.down("sm")]:{
       display:"flex",
       flexDirection:"column",
-      
+      marginTop:theme.spacing(15),
       alignItems:"center",
       width: theme.spacing(20),
     
@@ -53,13 +53,20 @@ icon1:{
     position: "absolute",
   top: "0",
   left: "0",
-
+ [theme.breakpoints.down("sm")]:{
+     width: theme.spacing(6),
+     height: "auto"
+ }
 },
 icon2:{
     position: "absolute",
   top: "0",
   left: "0",
   opacity: ".8",
+  [theme.breakpoints.down("sm")]:{
+    width: theme.spacing(6),
+    height: "auto"
+}
 },
 aboutText:{
     marginLeft:theme.spacing(10),
@@ -69,16 +76,27 @@ aboutText:{
    
 },
 aboutTextParagraph:{
-   width:"250px", 
+   width:theme.spacing(32), 
    marginTop: theme.spacing(2),
    fontFamily:"Sora, sans-serif",
     fontWeight:"500",
+    [theme.breakpoints.down("sm")]:{
+        fontSize: theme.spacing(1.8),
+        width:theme.spacing(30),
+    }
 }, 
 title:{
     color:"#ac3b69", 
     fontFamily:"Sora, sans-serif",
     fontWeight:"400",
+    [theme.breakpoints.down("sm")]:{
+     fontSize: theme.spacing(2.5)
+    }
     
+}, 
+aboutImg:{
+    width: theme.spacing(0),
+    height: "auto"
 }
 
 
@@ -104,7 +122,7 @@ function Section1() {
                 </p>
             </div>
             </div>
-            <div className={classes.about1}>
+            <div style={{marginBottom:"30px"}} className={classes.about1}>
            <div className={classes.aboutImg}>
            <img className={classes.icon1} src="/images/ICON2.png"/>
             <img className={classes.icon2} src="/images/Icon.png"/>
@@ -115,12 +133,12 @@ function Section1() {
             </div>
             </div>
             <div className={classes.about1}>
-           <div className={classes.aboutImg}>
+           <div className={classes.aboutImg} >
             <img className={classes.icon1} src="/images/ICON3.png"/>
             <img className={classes.icon2} src="/images/Icon.png"/>
            </div>
             <div className = {classes.aboutText}>
-                <h2 className={classes.title}>Play To Earn</h2>
+                <h2  className={classes.title}>Play To Earn</h2>
                 <p className={classes.aboutTextParagraph}>Findmeet is a play to earn game where you can use, earn, and burn $MEET to create your life into the gane.Build property that becomes Nfts and much more.</p>
             </div>
             </div>

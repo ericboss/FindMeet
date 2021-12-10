@@ -17,18 +17,20 @@ main: {
         height:theme.spacing(150),
         marginTop:theme.spacing(-25),
         marginBottom: theme.spacing(-35),
+        
         [theme.breakpoints.down("sm")]:{
-            marginTop:theme.spacing(10), 
+            marginTop:theme.spacing(5), 
         }
 },
 items:{
     
     marginTop: theme.spacing(25),
+    marginRight: theme.spacing(10),
     display:"flex",
     flexDirection: "column", 
     alignItems: "center",  
     [theme.breakpoints.down("sm")]:{
-        marginTop:theme.spacing(15), 
+        marginTop:theme.spacing(5), 
     }
     
     
@@ -40,19 +42,23 @@ title:{
     display:"flex",
     alignItems:"center", 
     [theme.breakpoints.down("sm")]:{
-        marginLeft: theme.spacing(5), 
+        marginLeft: theme.spacing(9), 
         marginRight: theme.spacing(5), 
         display:"flex",
         alignItems: "center", 
         flexDirection:"column",
-        marginTop:theme.spacing(25), 
+        marginTop:theme.spacing(45), 
       }
 }, 
 body:{
     color:"white",
     fontFamily:"Sora, sans-serif",
        fontWeight:"400",
-    textAlign:"center"
+    textAlign:"center",
+    [theme.breakpoints.down("sm")]:{
+        marginLeft: theme.spacing(5),
+        fontSize: theme.spacing(1.5)
+    }
     
 }, 
 body1:{
@@ -79,8 +85,8 @@ telegram:{
     borderBottomRightRadius: "50%60px", 
     boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
     [theme.breakpoints.down("sm")]:{
-        marginLeft: theme.spacing(4), 
-        marginRight: theme.spacing(6)
+        marginLeft: theme.spacing(10), 
+        marginRight: theme.spacing(3)
       }
   },
   title1:{

@@ -4,6 +4,19 @@ import { Send } from '@material-ui/icons'
 import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) =>({
+  "@keyframes example": {
+    "0%": {
+      
+      transform: "translateY(0%)"
+    },
+    "75%":{
+      transform: "translateY(3%)"
+    },
+    "100%": {
+      
+      transform: "translateY(0%)"
+    }
+  },
     section:{
         backgroundImage: `url('./images/features-bg.png')`,
         backgroundPosition: 'center', 
@@ -24,6 +37,13 @@ const useStyles = makeStyles((theme) =>({
     sectionInfo:{
         marginLeft:theme.spacing(1),
         marginRight:theme.spacing(2),
+        [theme.breakpoints.down("sm")]:{
+          marginTop:theme.spacing(5),
+          display:"flex",
+          flexDirection:"column",
+          marginTop:theme.spacing(5),
+          alignItems:"center"
+        }
     },
     sectionText:{
        width: theme.spacing(75) , 
@@ -34,12 +54,13 @@ const useStyles = makeStyles((theme) =>({
        marginBottom:theme.spacing(3),
        color:"#5d2177", 
        [theme.breakpoints.down("sm")]:{
-        width:"290px",
-        marginLeft:theme.spacing(8),
-        fontSize:"19px",
-        textAlign:"center",
-        marginBottom:theme.spacing(5),
-      }
+        marginTop: theme.spacing(-1),
+     width:theme.spacing(40), 
+     marginLeft: theme.spacing(-1.5),
+     fontSize: theme.spacing(1.8),
+     textAlign: "center",
+ 
+   }
     },
     title:{
         color:"#ac3b69", 
@@ -49,23 +70,20 @@ const useStyles = makeStyles((theme) =>({
         width:"70%", 
         marginBottom:theme.spacing(3), 
         [theme.breakpoints.down("sm")]:{
-            width:theme.spacing(35),
-            marginLeft: theme.spacing(8),
-            marginRight: theme.spacing(8),
-          }
+          width:theme.spacing(35),
+          fontSize: theme.spacing(3),
+          textAlign:"center",
+          marginLeft: theme.spacing(9), 
+          marginRight: theme.spacing(12), 
+        }
     }, 
   
       list1:{
           display: "flex",
           alignItems:"center"
       },
-      item:{
-        marginLeft: theme.spacing(1), 
-        marginBottom: theme.spacing(1),
-        fontFamily:"Sora, sans-serif",
-        fontWeight:"500",
-        lineHeight: theme.spacing(8),
-      },
+   
+     
       sectionImg:{
           display:"block",
        marginLeft:theme.spacing(20),
@@ -78,7 +96,9 @@ const useStyles = makeStyles((theme) =>({
        sectionImgSub:{
         width: theme.spacing(65),
         height  : theme.spacing(53),
-       
+        animationName: "$example",
+        animationDuration: "4s",
+        animationIterationCount: "infinite",
 
         [theme.breakpoints.down("sm")]:{
             width: theme.spacing(60), 
@@ -93,7 +113,8 @@ const useStyles = makeStyles((theme) =>({
       icon:{
         width:theme.spacing(3),
         [theme.breakpoints.down("sm")]:{
-            width:theme.spacing(3),
+            width:theme.spacing(2.5),
+            marginLeft:theme.spacing(2),
             height:"auto"
             
           }
@@ -106,11 +127,12 @@ const useStyles = makeStyles((theme) =>({
           lineHeight: theme.spacing(0.2),
           marginLeft:theme.spacing(2),
           marginTop:theme.spacing(1),
-          
+          textAlign: "left",
         [theme.breakpoints.down("sm")]:{
-            width:"295px" ,
-            fontSize:"18px",
+            width:theme.spacing(41.1) ,
+            fontSize: theme.spacing(1.5),
             marginLeft:theme.spacing(1), 
+            lineHeight: theme.spacing(0.3),
             marginBottom:theme.spacing(1)
             
             
@@ -119,7 +141,7 @@ const useStyles = makeStyles((theme) =>({
       lists:{
         [theme.breakpoints.down("sm")]:{
            
-            marginLeft:theme.spacing(5)
+            marginLeft:theme.spacing(2)
             
           }   
       }, 

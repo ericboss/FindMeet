@@ -16,9 +16,10 @@ main: {
         justifyContent: "space-between", // vertical
         alignItems: "center" ,
         marginBottom: theme.spacing(40),
+        marginTop:theme.spacing(-45),
         [theme.breakpoints.down("sm")]:{
             
-            marginTop:theme.spacing(-1),
+            marginTop:theme.spacing(-50),
             marginBottom: theme.spacing(5),
           }
 }, 
@@ -27,9 +28,9 @@ graphico:{
         height: "auto",
         marginBottom: theme.spacing(5),
         [theme.breakpoints.down("sm")]:{
-            width: theme.spacing(50), 
-           height: theme.spacing(40),
-           marginLeft:theme.spacing(3)
+            width: theme.spacing(46), 
+           height: "auto",
+           marginLeft:theme.spacing(1)
           }
 }, 
 tables:{
@@ -58,24 +59,26 @@ marginLeft: theme.spacing(4)
 },
 tabella1:{
     [theme.breakpoints.down("sm")]:{
-        width: theme.spacing(25), 
+        width: theme.spacing(45), 
        height: "auto",
-       marginRight:theme.spacing(8)
+       marginRight:theme.spacing(17)
      
       }
 },
 tabella2:{
     [theme.breakpoints.down("sm")]:{
-        width: theme.spacing(35), 
-       marginRight:theme.spacing(14)
+        width: theme.spacing(45), 
+       marginRight:theme.spacing(18),
+       height: "auto",
      
       }
 },
 tabella3:{
     marginTop:theme.spacing(4),
     [theme.breakpoints.down("sm")]:{
-        width: theme.spacing(35), 
-       marginRight:theme.spacing(14)
+        width: theme.spacing(45), 
+       marginRight:theme.spacing(18),
+       height: "auto",
      
       }
 },
@@ -85,10 +88,11 @@ title:{
     color:"#5d2177", 
     fontFamily:"Sora, sans-serif",
         fontWeight:"100",
-      
+      textAlign: "center",
     [theme.breakpoints.down("sm")]:{
         fontSize:"30px",
-       marginLeft:theme.spacing(4)
+       marginLeft:theme.spacing(3.5),
+       width: theme.spacing(30),
      
       }
 }, 
@@ -107,7 +111,7 @@ button:{
         borderRadius:"20%", 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
         [theme.breakpoints.down("sm")]:{
-            marginLeft: theme.spacing(4), 
+            marginLeft: theme.spacing(0), 
             marginBottom: theme.spacing(8)
           }
       

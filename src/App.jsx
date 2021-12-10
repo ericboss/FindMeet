@@ -20,8 +20,8 @@ function App() {
   return (
     <div className="App">
       
-      <Header />
-      <Section1 />
+      <Header  />
+      <Section1  />
       
           <Section2/>
            <Section3

@@ -1,10 +1,27 @@
 import  { useState } from 'react';
 import * as React from 'react';
-import {  Button, makeStyles, Typography, MenuItem, Menu } from "@material-ui/core"
+import { Avatar, Button, makeStyles, Typography, MenuItem, Menu } from "@material-ui/core"
 import { Facebook, Instagram, Reddit, Send, Twitter, Close } from '@material-ui/icons'
 import { Menu as MenuIcon } from '@material-ui/icons';
 import Fade from 'react-reveal/Fade';
 const useStyles = makeStyles((theme) =>({
+  
+    "@keyframes example": {
+      "0%": {
+        
+        transform: "translateY(0%)"
+      },
+      "75%":{
+        transform: "translateY(3%)"
+      },
+      "100%": {
+        
+        transform: "translateY(0%)"
+      }
+    },
+  
+  
+
   main:{
     backgroundImage: `url('./images/BG.png')`,
         backgroundPosition: 'bottom',  
@@ -40,8 +57,13 @@ const useStyles = makeStyles((theme) =>({
       alignItems:"center", 
       justifyContent:"space-around",
       marginRight:theme.spacing(30),
+      zIndex: 100,
+     
       [theme.breakpoints.down("sm")]:{
         marginLeft:theme.spacing(2),
+       
+        
+      
           
         
       } 
@@ -52,10 +74,9 @@ const useStyles = makeStyles((theme) =>({
   logoHeader:{
     marginTop:"30px", 
     [theme.breakpoints.down("sm")]:{
-        position: "relative",
-        
-        width:"200px",
-        height:"auto",
+        width: theme.spacing(20),
+        height: "auto",
+        marginLeft: theme.spacing(2),
         
         
     }
@@ -87,6 +108,7 @@ const useStyles = makeStyles((theme) =>({
       justifyContent:"space-between",
       fontFamily: "Sora, sans-serif",
       marginLeft:theme.spacing(30),
+      zIndex: 1000,
       [theme.breakpoints.down("sm")]:{
           
       }
@@ -129,15 +151,20 @@ const useStyles = makeStyles((theme) =>({
     height  : "auto", 
     marginRight: theme.spacing(45),
     marginTop: theme.spacing(-35),
+    
+    
     [theme.breakpoints.down("sm")]:{
-        marginLeft:theme.spacing(60),
-        marginTop: theme.spacing(-20)
+        marginLeft:theme.spacing(80),
+        marginTop: theme.spacing(-70)
     
       }
   },
   bannerImgSub:{
     width:theme.spacing(110), 
     height  : "auto",
+    animationName: "$example",
+    animationDuration: "4s",
+    animationIterationCount: "infinite",
     
     [theme.breakpoints.down("sm")]:{
         width: theme.spacing(55), 
@@ -151,7 +178,11 @@ const useStyles = makeStyles((theme) =>({
     width: theme.spacing(100), 
     height  : theme.spacing(100) , 
     marginLeft:theme.spacing(10),
-    marginTop:theme.spacing(20) 
+    marginTop:theme.spacing(20) , 
+    [theme.breakpoints.down("sm")]:{
+      marginTop: theme.spacing(-2),
+      marginLeft:theme.spacing(48),
+    },
   }, 
   link:{
     listStyle: "none",
@@ -169,11 +200,11 @@ const useStyles = makeStyles((theme) =>({
      
       
       [theme.breakpoints.down("sm")]:{
-          marginTop:theme.spacing(10),
-        fontSize:"35px", 
-        marginBottom:theme.spacing(5),
-        width:"320px",
-        marginLeft:theme.spacing(7),
+         fontSize: theme.spacing(4),
+         marginTop: theme.spacing(-15),
+         marginLeft: theme.spacing(7),
+
+       
       }
 
   }, 
@@ -193,25 +224,43 @@ const useStyles = makeStyles((theme) =>({
   }, 
   bannerIcon:{
       marginTop: theme.spacing(6), 
-      
+      display:"flex",
+      alignItems: "center",
       [theme.breakpoints.down("sm")]:{
-        marginTop:theme.spacing(10),
-        width:"500px",
-        margin:theme.spacing(2),
-        marginLeft:theme.spacing(2),
+        
+        display:"flex",
+        alignItems: "center",
+        flexDirection:"column"
     }
       
   },
+  telegramMain:{
+    [theme.breakpoints.down("sm")]:{
+  marginLeft: theme.spacing(8)
+    }
+  },
+  socialsMain:{
+    marginLeft: theme.spacing(19),
+    marginTop: theme.spacing(-5.5),
+    [theme.breakpoints.down("sm")]:{
+    marginLeft: theme.spacing(17),
+    marginTop: theme.spacing(0),
+    }
+  },
   socials:{
       position:"relative",
-      color: "white",
-      backgroundColor:"#5d2177", 
-      borderRadius:"50%", 
+       
       cursor:"pointer", 
-      marginLeft: theme.spacing(1),
+      marginLeft: theme.spacing(0.5),
       top: theme.spacing(2),
-      width:theme.spacing(4),
-      height:theme.spacing(4),
+      width:theme.spacing(3),
+      height:"auto",
+      [theme.breakpoints.down("sm")]:{
+      width: theme.spacing(3.5),
+      height: "auto",
+      marginLeft: theme.spacing(0.5),
+    
+      }
 
   }, 
   telegram:{
@@ -248,14 +297,36 @@ const useStyles = makeStyles((theme) =>({
         display:"none"
       }
   },
+
+  lightPapaerItem:{
+    marginTop: theme.spacing(0),
+    color: "white",
+    textTransform:"capitalize",
+    backgroundColor:"#5d2177", 
+    borderTopLeftRadius: "50%60px",
+    borderBottomLeftRadius: "50%60px",  
+    borderTopRightRadius: "50%60px",
+    borderBottomRightRadius: "50%60px",  
+   
+    fontFamily: "Sora, sans-serif",
+    fontWeight:"400",
+     display: "block",
+  },
   
   menuItems:{
-      textDecoration:"none"
+      textDecoration:"none",
+      color:"#fff",
+      fontFamily: "Sora, sans-serif",
+      fontWeight:"200"
   },
 ti:{
   fontFamily: "Sora, sans-serif",
   fontWeight:"100"
+},
+menuPaper: {
+  backgroundColor: "#9D366C"
 }
+
  
 
 }))
@@ -270,7 +341,6 @@ function Header() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
     return (
         <div className={classes.main}>
             <div className={classes.container}>
@@ -299,28 +369,43 @@ function Header() {
         aria-controls="basic-menu"
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
+        onClick = {handleClick}
        
                     />
                     
-
+   
       <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
+         id="demo-positioned-menu"
+         aria-labelledby="demo-positioned-button"
+         anchorEl={anchorEl}
+         anchorReference="anchorPosition"
+          anchorPosition={{ top: 60 }}
+         open={open}
+         onClose={handleClose}
+         anchorOrigin={{
+           vertical: 'top',
+           horizontal: 'left',
+         }}
+         transformOrigin={{
+           vertical: 'top',
+           horizontal: 'left',
+         }}
+         classes={{ paper: classes.menuPaper }}
       >
-        <MenuItem onClick={handleClose}>Home</MenuItem>
-        <MenuItem onClick={handleClose}> <a className={classes.menuItems} href="#HowItWorks">How it Works</a></MenuItem>
-        <MenuItem onClick={handleClose}><a className={classes.menuItems} href="#tokenomics">Tokenomics</a></MenuItem>
-        <MenuItem onClick={handleClose}><a className={classes.menuItems} href="#timeline">Roadmap</a></MenuItem>
-        <MenuItem onClick={handleClose}><a className={classes.menuItems}  href="#meetToken">$MEET</a></MenuItem>
-        <MenuItem onClick={handleClose}><a className={classes.menuItems} href="#lightpaper">Demo LightPaper</a></MenuItem>
+        <MenuItem  style={{width:"800px", height:"50px",color:"#fff"}} onClick={handleClose}>Home</MenuItem>
+        <MenuItem  onClick={handleClose}> <a className={classes.menuItems} href="#HowItWorks">How it Works</a></MenuItem>
+        <MenuItem  onClick={handleClose}><a className={classes.menuItems} href="#tokenomics">Tokenomics</a></MenuItem>
+        <MenuItem   onClick={handleClose}><a className={classes.menuItems} href="#timeline">Roadmap</a></MenuItem>
+        <MenuItem   onClick={handleClose}><a className={classes.menuItems}  href="#meetToken">$MEET</a></MenuItem>
+        <MenuItem  onClick={handleClose}><Button
+                    variant="contained"
+                    className={classes.lightPapaerItem}
+                    href="#lightpaper"
+                     >
+                    <p className={classes.ti}>Demo LightPaper</p>
+                    </Button ></MenuItem>
       </Menu>
-
-       
+    
 
                 </div>
             </div>
@@ -335,7 +420,7 @@ function Header() {
                      <Typography className= {classes.body} variant="body2">FindMeet is the first decentralized dating & gaming social network in the metaverse where users can create their own world, find new people and meet them at the comfort of their customized home. </Typography>
                     </div>
                     <div classname ={classes.bannerIcon}>
-                        
+                        <div className={classes.telegramMain}>
                     <Button
                     startIcon={<Send />}
                     variant="contained"
@@ -343,24 +428,23 @@ function Header() {
                      >
                     Join Telegram
                     </Button >
-                    
-                    
-                    <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.socials}/></a>
+                     </div>
+
+                    <div className={classes.socialsMain}>
+                    <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.socials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.socials}/></a>
+                    <img className={classes.socials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.socials}/></a>
+                    <img className={classes.socials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.socials}/></a>
-                   
+                    <img className={classes.socials}   src="/images/instagram.png" />
+                    
+                    </a>
+                    
+                    </div>
                     </div>
                 </div>
                 

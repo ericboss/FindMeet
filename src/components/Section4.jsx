@@ -4,6 +4,19 @@ import { Send } from '@material-ui/icons'
 import Fade from 'react-reveal/Fade';
 
 const useStyles = makeStyles((theme) =>({
+    "@keyframes example": {
+        "0%": {
+          
+          transform: "translateY(0%)"
+        },
+        "75%":{
+          transform: "translateY(3%)"
+        },
+        "100%": {
+          
+          transform: "translateY(0%)"
+        }
+      },
     section:{
         backgroundImage: `url('./images/features-bg.png')`,
         backgroundPosition: 'bottom', 
@@ -21,7 +34,7 @@ const useStyles = makeStyles((theme) =>({
         [theme.breakpoints.down("sm")]:{
             display:"flex",
             flexDirection:"column",
-            marginTop:theme.spacing(5),
+            marginTop:theme.spacing(10),
             alignItems:"center"
           }
 
@@ -42,11 +55,13 @@ const useStyles = makeStyles((theme) =>({
        marginBottom:theme.spacing(3),
        color:"#5d2177",
        [theme.breakpoints.down("sm")]:{
-        width:"260px", 
-        marginLeft: theme.spacing(4),
-        
-        
-      }
+        marginTop: theme.spacing(-1),
+     width:theme.spacing(40), 
+     marginLeft: theme.spacing(3),
+     fontSize: theme.spacing(1.8),
+     textAlign: "center",
+ 
+   }
     },
     title:{
         color:"#ac3b69", 
@@ -57,13 +72,16 @@ const useStyles = makeStyles((theme) =>({
         width: theme.spacing(90),
         marginBottom:theme.spacing(1), 
         [theme.breakpoints.down("sm")]:{
-            width:theme.spacing(35),
-            marginLeft: theme.spacing(4), 
-            marginRight: theme.spacing(7), 
-          }
+          width:theme.spacing(40),
+          fontSize: theme.spacing(3.5),
+          textAlign:"center",
+          marginLeft: theme.spacing(4), 
+          marginBottom: theme.spacing(5), 
+        }
     }, 
     telegram:{
         position:"relative",
+        display: "flex",
         fontFamily:"Sora, sans-serif",
         fontWeight:"400",
         marginTop: theme.spacing(0),
@@ -76,8 +94,34 @@ const useStyles = makeStyles((theme) =>({
     borderBottomRightRadius: "50%60px", 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
         [theme.breakpoints.down("sm")]:{
-            marginLeft: theme.spacing(10), 
-            marginRight: theme.spacing(8)
+            marginLeft: theme.spacing(12), 
+            marginRight: theme.spacing(8),
+            width: theme.spacing(22),
+            display: "none",
+          }
+      },
+
+      telegram1:{
+        display: "none",
+        
+        [theme.breakpoints.down("sm")]:{
+            position:"relative",
+        display: "flex",
+        fontFamily:"Sora, sans-serif",
+        fontWeight:"400",
+        marginTop: theme.spacing(0),
+        color: "white",
+        backgroundColor:"#5d2177", 
+        textTransform:"capitalize",
+        borderTopLeftRadius: "50%60px",
+        borderBottomLeftRadius: "50%60px",  
+        borderTopRightRadius: "50%60px",
+        borderBottomRightRadius: "50%60px", 
+        boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+            marginLeft: theme.spacing(5), 
+            marginRight: theme.spacing(44),
+            width: theme.spacing(22),
+            
           }
       },
       sectionImg:{
@@ -90,11 +134,16 @@ const useStyles = makeStyles((theme) =>({
       sectionImgSub:{
         
         marginBottom: theme.spacing(9),
+        animationName: "$example",
+        animationDuration: "4s",
+        animationIterationCount: "infinite",
         [theme.breakpoints.down("sm")]:{
             width: theme.spacing(45), 
            height  : theme.spacing(45),
-           marginBottom: theme.spacing(5),
+           marginBottom: theme.spacing(0),
            marginRight:theme.spacing(7),
+           marginLeft: theme.spacing(25),
+           marginTop: theme.spacing(-12),
            
            
           }
@@ -126,6 +175,14 @@ function Section4() {
             <div className={classes.sectionImg}>
             <img className={classes.sectionImgSub}src ="/images/dat1.png"></img>
             </div>
+
+            <Button
+                    startIcon={<Send />}
+                    variant="contained"
+                    className ={classes.telegram1}
+                     >
+                    Join Telegram
+                    </Button>
             </Fade>
             </div>
         </div>

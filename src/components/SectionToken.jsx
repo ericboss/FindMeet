@@ -6,6 +6,32 @@ import Fade from 'react-reveal/Fade';
 
 
 const useStyles = makeStyles((theme) =>({
+    "@keyframes example": {
+        "0%": {
+          
+          transform: "translateY(0%)"
+        },
+        "75%":{
+          transform: "translateY(3%)"
+        },
+        "100%": {
+          
+          transform: "translateY(0%)"
+        }
+      },
+      "@keyframes example1": {
+        "0%": {
+          
+          transform: "translateY(3%)"
+        },
+        "75%":{
+          transform: "translateY(0%)"
+        },
+        "100%": {
+          
+          transform: "translateY(3%)"
+        }
+      },
 main: {
     backgroundImage: `url('./images/CTA Bg.png')`,
     backgroundPosition: 'center center',  
@@ -15,14 +41,35 @@ main: {
         display:"flex",
         flexDirection: "column", 
         alignItems: "center", 
-        marginTop: theme.spacing(25),
-        marginBottom: theme.spacing(15),
+        marginTop: theme.spacing(15),
+        marginBottom: theme.spacing(10),
+        
+},
+image1:{
+    animationName: "$example",
+    animationDuration: "4s",
+    animationIterationCount: "infinite",
+},
+image2:{
+    animationName: "$example1",
+    animationDuration: "4s",
+    animationIterationCount: "infinite",
+},
+image3:{
+    animationName: "$example",
+    animationDuration: "4s",
+    animationIterationCount: "infinite",
 },
 items:{
-    marginTop: theme.spacing(20),
+    marginTop: theme.spacing(25),
+    marginRight: theme.spacing(15),
     display:"flex",
     flexDirection: "column", 
     alignItems: "center",  
+    [theme.breakpoints.down("sm")]:{
+    marginLeft: theme.spacing(12),
+
+    },
 },
 title:{
   
@@ -68,9 +115,9 @@ function SectionToken() {
             <div className={classes.items}>
                 <Typography className={classes.title} variant="h4"> The <span className={classes.meet}>$MEET</span> Token</Typography>
                 <div className={classes.images}>
-                    <img src="/images/Token222.png"/>
-                    <img src="/images/Token111.png"/>
-                    <img src="/images/Token333.png"/>
+                    <img className={classes.image1} src="/images/Token222.png"/>
+                    <img  className={classes.image2} src="/images/Token111.png"/>
+                    <img className={classes.image3} src="/images/Token333.png"/>
                 </div>
                 <Typography className={classes.body} variant="body2">$MEET is our deflationary token that has real utilities on FindMeet App and
                 Metaverse ecosystem. With $MEET user can upgrade their profiles, find specific

@@ -35,11 +35,13 @@ teamMembers1:{
      marginRight: theme.spacing(20),
      
     [theme.breakpoints.down("sm")]:{
-        display:"flex", 
-        alignItems:"center", 
-        flexDirection:"column",
-        marginLeft: theme.spacing(10), 
-        marginRight: theme.spacing(5),
+        display:"grid",
+        gridTemplateColumns: "1fr",
+         gridGap: theme.spacing(5),
+         columnGap: theme.spacing(0),
+         marginLeft: theme.spacing(-25),
+         marginTop: theme.spacing(2),
+       
         
         
       }
@@ -99,6 +101,10 @@ title:{
     fontWeight:"100",
     fontSize:theme.spacing(6.5),
     marginBottom:theme.spacing(3),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft: theme.spacing(-6),
+
+    }
     
 },
 infoText:{
@@ -112,9 +118,9 @@ infoText:{
         fontSize:theme.spacing(1.8),
     [theme.breakpoints.down("sm")]:{
         marginLeft: theme.spacing(7), 
-        marginRight: theme.spacing(3),
-        width:"270px",
-        fontSize:"20px",
+        marginRight: theme.spacing(15),
+        width: theme.spacing(45),
+
       }
 },
 socials:{
@@ -141,6 +147,7 @@ name:{
  marginBottom: theme.spacing(-1),
  [theme.breakpoints.down("sm")]:{
     lineHeight : "55px" ,
+    marginLeft: theme.spacing(-15)
  }
 },
 jobTitle:{
@@ -174,20 +181,215 @@ socials:{
     marginLeft: theme.spacing(7),
 },
 subSocials:{
-    color: "white",
-    backgroundColor:"#5d2177", 
-    borderRadius:"50%", 
+    
     cursor:"pointer", 
     marginLeft: theme.spacing(1),
     top: theme.spacing(1),
-    width: theme.spacing(2.2),
+    width: theme.spacing(2.5),
     height:"auto"
 
 },
 items:{
  marginLeft: theme.spacing(35),
+ [theme.breakpoints.down("sm")]:{
+
+ },
  
-}
+ 
+},
+nameEric:{
+    width:"180%",
+     marginLeft:"-100px",
+     color: "#5d2177",
+ fontFamily:"Sora, sans-serif",
+ textAlign: "center",
+ fontWeight:"500",
+ fontSize: theme.spacing(6),
+ 
+ marginBottom: theme.spacing(-1),
+ [theme.breakpoints.down("sm")]:{
+     marginRight: theme.spacing(30), 
+     marginLeft: theme.spacing(-28),
+ }
+ },
+ jobTitleEric:{
+    color: "#5d2177",
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"100",
+    textAlign: "center",
+    
+    fontSize: theme.spacing(3),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-20),
+    }
+ },
+ jobTitleEric1:{
+    color: "#5d2177",
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"100",
+    textAlign: "center",
+    width:"180%",
+     marginLeft:"-100px",
+    
+    fontSize: theme.spacing(3),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-28),
+    }
+ }, 
+ nameAlex:{
+    marginLeft:"-20px",
+    width:"180%",
+     marginLeft:"-100px",
+     color: "#5d2177",
+ fontFamily:"Sora, sans-serif",
+ textAlign: "center",
+ fontWeight:"500",
+ fontSize: theme.spacing(6),
+ 
+ marginBottom: theme.spacing(-1),
+ [theme.breakpoints.down("sm")]:{
+    marginLeft:theme.spacing(-28),
+ }
+ },
+ jobTitleAlex:{
+    width:"150%",
+    marginLeft:"-55px",
+    color: "#5d2177",
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"100",
+    textAlign: "center",
+    
+    fontSize: theme.spacing(3),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-21),
+    }
+
+ },
+ nameCameron:{
+    width:"180%", 
+    marginLeft:"-40px",
+     color: "#5d2177",
+ fontFamily:"Sora, sans-serif",
+ textAlign: "center",
+ fontWeight:"500",
+ fontSize: theme.spacing(6),
+ 
+ marginBottom: theme.spacing(-1),
+ [theme.breakpoints.down("sm")]:{
+    marginLeft:theme.spacing(-29),
+    fontSize: theme.spacing(5),
+ }
+
+ },
+
+ jobTitleCameron:{
+    
+    color: "#5d2177",
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"100",
+    textAlign: "center",
+    width:"150%", 
+    marginLeft:"-40px",
+    
+    fontSize: theme.spacing(3),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-21),
+    }
+ },
+ nameFarhul:{
+    width:"150%", 
+    marginLeft:"-80px",
+    color: "#5d2177",
+    fontFamily:"Sora, sans-serif",
+    textAlign: "center",
+    fontWeight:"500",
+    fontSize: theme.spacing(6),
+    
+    marginBottom: theme.spacing(-1),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-21),
+    }
+    
+ }, 
+ namePaul:{
+    marginLeft:"-25px",
+    color: "#5d2177",
+    fontFamily:"Sora, sans-serif",
+    textAlign: "center",
+    fontWeight:"500",
+    fontSize: theme.spacing(6),
+    
+    marginBottom: theme.spacing(-1),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-18),
+    }
+ },
+ jobTitlePaul:{
+    color: "#5d2177",
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"100",
+    textAlign: "center",
+    
+    fontSize: theme.spacing(3),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-18),
+    }
+ }, 
+ teamPicMep:{
+    width:"95%", 
+     height: "auto",
+    marginBottom:"50px",
+    marginLeft: theme.spacing(5),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-5), 
+        width:"85%", 
+        height: "auto",
+    }
+
+ },
+ nameMep:{
+    width:"150%", 
+    marginLeft:"-30px",
+    color: "#5d2177",
+ fontFamily:"Sora, sans-serif",
+ textAlign: "center",
+ fontWeight:"500",
+ fontSize: theme.spacing(6),
+ 
+ marginBottom: theme.spacing(-1),
+ [theme.breakpoints.down("sm")]:{
+    marginLeft:theme.spacing(-22), 
+ }
+ },
+ jobTitleMep:{
+    width:"150%",
+     marginLeft:"-30px",
+     color: "#5d2177",
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"100",
+    textAlign: "center",
+
+    fontSize: theme.spacing(3),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-21),
+        fontSize: theme.spacing(2.5),
+    }
+ },
+ jobTitleMep1:{
+    width:"200%",
+    marginLeft:"-60px",
+ 
+     color: "#5d2177",
+    fontFamily:"Sora, sans-serif",
+    fontWeight:"100",
+    textAlign: "center",
+
+    fontSize: theme.spacing(3),
+    [theme.breakpoints.down("sm")]:{
+        marginLeft:theme.spacing(-32.5),
+        fontSize: theme.spacing(2.3),
+    }
+ }
 
 
 }))
@@ -221,21 +423,18 @@ function Teams() {
 
 
 
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>
             </div>
                     
@@ -252,21 +451,18 @@ function Teams() {
 
 
 
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>
             </div>
 
@@ -281,23 +477,18 @@ function Teams() {
             
             <div className={classes.socials}>
 
-
-
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>
             </div>
         
@@ -315,28 +506,24 @@ function Teams() {
                 className={classes.teamPic}
                 src="/images/eric.png"
                 />
-                <Typography style={{width:"180%", marginLeft:"-100px"}} className={classes.name} variant="h5"> Eric Hermann</Typography>
-                <Typography className={classes.jobTitle} variant="body2"> CTO-Blockchain </Typography>
-                <Typography style={{width:"180%", marginLeft:"-100px"}} className={classes.jobTitle} variant="body2"> Software & App Developer </Typography>
+                <Typography  className={classes.nameEric} variant="h5"> Eric Hermann</Typography>
+                <Typography className={classes.jobTitleEric} variant="body2"> CTO-Blockchain </Typography>
+                <Typography  className={classes.jobTitleEric1} variant="body2"> Software & App Developer </Typography>
             <div className={classes.socials}>
 
 
-
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>
             </div>
                     
@@ -346,28 +533,23 @@ function Teams() {
                 className={classes.teamPic}
                 src="/images/Alex.png"
                 />
-                <Typography style={{ marginLeft:"-20px"}} className={classes.name} variant="h5"> Alex</Typography>
-                <Typography style={{width:"150%",marginLeft:"-55px"}} className={classes.jobTitle} variant="body2">Chief Social Media Officer</Typography>
+                <Typography  className={classes.nameAlex} variant="h5"> Alex</Typography>
+                <Typography  className={classes.jobTitleAlex} variant="body2">Chief Social Media Officer</Typography>
             
             <div className={classes.socials}>
 
-
-
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>
             </div>
 
@@ -377,28 +559,25 @@ function Teams() {
                 className={classes.teamPic}
                 src= "/images/cameron.png"
                 />
-                <Typography style={{width:"180%", marginLeft:"-40px"}} className={classes.name} variant="h5">Cameron Pheiffer</Typography>
-                <Typography style={{width:"150%", marginLeft:"-40px"}} className={classes.jobTitle} variant="body2">Game Developer & 3D Artist</Typography>
+                <Typography  className={classes.nameCameron} variant="h5">Cameron Pheiffer</Typography>
+                <Typography  className={classes.jobTitleCameron} variant="body2">Game Developer & 3D Artist</Typography>
             
             <div className={classes.socials}>
 
 
 
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>             
                
             </div>
@@ -409,28 +588,24 @@ function Teams() {
                 className={classes.teamPic}
                 src= ""
                 />
-                <Typography style={{width:"150%", marginLeft:"-80px"}} className={classes.name} variant="h5">Farhul Rozi</Typography>
+                <Typography  className={classes.nameFarhul} variant="h5">Farhul Rozi</Typography>
                 <Typography  style={{marginLeft:"-40px"}} className={classes.jobTitle} variant="body2">Gaming Developer</Typography>
             
             <div className={classes.socials}>
 
 
-
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>             
                
             </div>
@@ -441,60 +616,51 @@ function Teams() {
                 className={classes.teamPic}
                 src= "/images/pp.png"
                 />
-                <Typography style={{ marginLeft:"-25px"}} className={classes.name} variant="h5">Paul</Typography>
-                <Typography className={classes.jobTitle} variant="body2">Graphic Designer</Typography>
+                <Typography  className={classes.namePaul} variant="h5">Paul</Typography>
+                <Typography className={classes.jobTitlePaul} variant="body2">Graphic Designer</Typography>
             
             <div className={classes.socials}>
 
-
-
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>             
                
             </div>
 
             <div className={classes.items}>
             <img 
-                style = {{width:"100%",  height: "auto", marginBottom:"50px"}}
-                className={classes.teamPic}
+                
+                className={classes.teamPicMep}
                 src= "/images/Logo-mep-def.png"
                 />
-                <Typography  style={{width:"150%", marginLeft:"-30px"}}className={classes.name} variant="h5">Mep Law Int</Typography>
-                <Typography style={{width:"150%", marginLeft:"-30px"}} className={classes.jobTitle} variant="body2">International Law Firm based</Typography>
-                <Typography style={{width:"200%",marginLeft:"-60px"}} className={classes.jobTitle} variant="body2">in New York, Rome, Milan,Izmir, London </Typography>
+                <Typography  className={classes.nameMep} variant="h5">Mep Law Int</Typography>
+                <Typography  className={classes.jobTitleMep} variant="body2">International Law Firm based</Typography>
+                <Typography  className={classes.jobTitleMep1} variant="body2">in New York, Rome, Milan,Izmir, London </Typography>
             <div className={classes.socials}>
 
 
-
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>             
                
             </div>

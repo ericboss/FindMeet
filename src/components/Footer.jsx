@@ -21,9 +21,8 @@ socials:{
     
 },
 subSocials:{
-    color: "white",
-    backgroundColor:"#5d2177", 
-    borderRadius:"50%", 
+    width: theme.spacing(2.5),
+    height: "auto",
     cursor:"pointer", 
     marginLeft: theme.spacing(1),
     top: theme.spacing(1),
@@ -53,22 +52,18 @@ function Footer() {
             <div className={classes.socials}>
 
 
-
-            <a href="https://www.reddit.com/user/Findmeet">    
-                    <Reddit 
-                    
-                    className = {classes.subSocials}/></a>
+            <a href="https://www.reddit.com/user/Findmeet">
+                    <img className={classes.subSocials}   src="/images/reddit.png" />  
+                     </a>
 
                     <a href="https://twitter.com/FINDMEET_IO">
-                    <Twitter
-                     
-                     className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/twitter.png" /></a>
                     <a href="https://www.facebook.com/Findmeet.io/" >
-                        <Facebook
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
-                    <Instagram 
-                    className = {classes.subSocials}/></a>
+                    <img className={classes.subSocials}   src="/images/instagram.png" />
+                    
+                    </a>
             </div>
             </div>
         </div>
