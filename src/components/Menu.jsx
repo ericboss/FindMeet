@@ -5,15 +5,17 @@ import { Menu as MenuIcon } from '@material-ui/icons';
 const useStyles = makeStyles((theme) =>({
 
     main:{
-        backgroundImage: `url('./images/bg-menu.png')`,
+      
             backgroundPosition: 'bottom',  
             backgroundRepeat: 'no-repeat',
+            backgroundColor: "#90326F",
             // margin: 'auto',
             height: theme.spacing(10),
             width: '100%',
            zIndex:999,
             margin : 0,
-            borderRadius: 8,
+            color:"#fff",
+          
             position:"fixed",
             top:0,
             

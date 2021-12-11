@@ -13,7 +13,7 @@ main: {
     marginTop:theme.spacing(20),
     [theme.breakpoints.down("sm")]:{
         
-            marginTop:theme.spacing(25),
+            marginTop:theme.spacing(15),
     
       }
         

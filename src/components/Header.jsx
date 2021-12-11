@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) =>({
         width: '100%',
         top:0,
         margin : 0,
-        borderRadius: 8,
+       
         [theme.breakpoints.down("sm")]:{
 
             height: theme.spacing(80),
@@ -48,7 +48,8 @@ const useStyles = makeStyles((theme) =>({
     [theme.breakpoints.down("sm")]:{
     marginRight:theme.spacing(5),
     width:"15%",
-    marginBottom:theme.spacing(30)
+    marginBottom:theme.spacing(20),
+    marginTop:theme.spacing(10)
         
       }
   },
@@ -141,7 +142,8 @@ const useStyles = makeStyles((theme) =>({
         display:"flex", 
         flexDirection:"column",
         alignItems: "center",
-        marginTop:theme.spacing(10)
+        marginTop:theme.spacing(10), 
+        
         
       }
       
@@ -183,7 +185,7 @@ const useStyles = makeStyles((theme) =>({
     marginLeft:theme.spacing(10),
     marginTop:theme.spacing(20) , 
     [theme.breakpoints.down("sm")]:{
-      marginTop: theme.spacing(-2),
+      marginTop: theme.spacing(5),
       marginLeft:theme.spacing(48),
     },
   }, 
