@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) =>({
       
             backgroundPosition: 'bottom',  
             backgroundRepeat: 'no-repeat',
-            backgroundColor: "#90326F",
+            backgroundColor:   "#90326F",
             // margin: 'auto',
             height: theme.spacing(10),
             width: '100%',
@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) =>({
             top:0,
             
             [theme.breakpoints.down("sm")]:{
+              backgroundColor: "#90326F",
                 zIndex:1034,
                 height: theme.spacing(10),
             width: theme.spacing(100),

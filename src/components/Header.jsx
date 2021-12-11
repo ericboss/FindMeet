@@ -26,12 +26,13 @@ const useStyles = makeStyles((theme) =>({
     backgroundImage: `url('./images/BG.png')`,
         backgroundPosition: 'bottom',  
         backgroundRepeat: 'no-repeat',
+      
         // margin: 'auto',
         height: theme.spacing(120),
         width: '100%',
         top:0,
         margin : 0,
-       
+       marginTop: theme.spacing(8),
         [theme.breakpoints.down("sm")]:{
 
             height: theme.spacing(80),
