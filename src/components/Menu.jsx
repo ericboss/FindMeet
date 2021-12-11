@@ -11,16 +11,16 @@ const useStyles = makeStyles((theme) =>({
             // margin: 'auto',
             height: theme.spacing(10),
             width: '100%',
-          
+           zIndex:999,
             margin : 0,
             borderRadius: 8,
             position:"fixed",
             top:0,
             
             [theme.breakpoints.down("sm")]:{
-    
-                height: theme.spacing(5),
-            width: '100%',
+                zIndex:1034,
+                height: theme.spacing(10),
+            width: theme.spacing(100),
             
             position:"fixed",
             top:0,
@@ -41,8 +41,9 @@ const useStyles = makeStyles((theme) =>({
         
         [theme.breakpoints.down("sm")]:{
           marginLeft:theme.spacing(2),
-         
-        
+          position:"fixed",
+          top:0,
+          zIndex: 999,
             
           
         } 

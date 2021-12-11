@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) =>({
       }
   },
   menu:{
-      display: "flex",
+      display: "none",
       alignItems:"center", 
       justifyContent:"space-around",
       marginRight:theme.spacing(30),
