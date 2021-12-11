@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) =>({
       
             backgroundPosition: 'bottom',  
             backgroundRepeat: 'no-repeat',
-            backgroundColor:   "#90326F",
+            background: "rgb(172,59,106)",
+background: "linear-gradient(90deg, rgba(172,59,106,1) 26%, rgba(93,34,119,1) 100%)",
             // margin: 'auto',
             height: theme.spacing(10),
             width: '100%',
@@ -20,10 +21,11 @@ const useStyles = makeStyles((theme) =>({
             top:0,
             
             [theme.breakpoints.down("sm")]:{
-              backgroundColor: "#90326F",
+              backgroundColor: "#98346D",
+              background: "#98346D",
                 zIndex:1034,
                 height: theme.spacing(10),
-            width: theme.spacing(100),
+           
             
             position:"fixed",
             top:0,
