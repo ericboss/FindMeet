@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) =>({
           }
     },
     sectionInfo:{
-        marginLeft:theme.spacing(-1),
+        marginLeft:theme.spacing(0),
         [theme.breakpoints.down("sm")]:{
             marginRight: theme.spacing(80)
         }
@@ -157,7 +157,7 @@ function Section5() {
     return (
 
         <div className={classes.section}>
-            <Fade bottom>
+            
                 <div className= {classes.container}>
             <div className={classes.sectionImg}>
             <img className={classes.sectionImgSub}src ="/images/relationship.png"></img>
@@ -184,7 +184,7 @@ function Section5() {
                      >
                     Join Telegram
                     </Button>
-            </Fade>
+          
             
         </div>
     )
