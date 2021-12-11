@@ -91,7 +91,7 @@ title:{
       textAlign: "center",
     [theme.breakpoints.down("sm")]:{
         fontSize:"30px",
-       marginLeft:theme.spacing(3.5),
+       marginLeft:theme.spacing(2),
        width: theme.spacing(30),
      
       }

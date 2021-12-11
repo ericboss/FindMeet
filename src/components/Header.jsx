@@ -32,12 +32,15 @@ const useStyles = makeStyles((theme) =>({
         top:0,
         margin : 0,
         borderRadius: 8,
+        
+        
         [theme.breakpoints.down("sm")]:{
 
             height: theme.spacing(80),
         width: '100%',
-        marginBottom:theme.spacing(20)
-            
+        marginBottom:theme.spacing(20),
+       
+        
           }
        
    
@@ -58,11 +61,10 @@ const useStyles = makeStyles((theme) =>({
       justifyContent:"space-around",
       marginRight:theme.spacing(30),
       zIndex: 100,
-     
+      
       [theme.breakpoints.down("sm")]:{
         marginLeft:theme.spacing(2),
        
-        
       
           
         
@@ -73,10 +75,14 @@ const useStyles = makeStyles((theme) =>({
   },
   logoHeader:{
     marginTop:"30px", 
+    marginLeft: theme.spacing(2),
+        
     [theme.breakpoints.down("sm")]:{
         width: theme.spacing(20),
         height: "auto",
         marginLeft: theme.spacing(2),
+        
+        
         
         
     }
@@ -243,7 +249,7 @@ const useStyles = makeStyles((theme) =>({
     marginLeft: theme.spacing(19),
     marginTop: theme.spacing(-5.5),
     [theme.breakpoints.down("sm")]:{
-    marginLeft: theme.spacing(17),
+    marginLeft: theme.spacing(15),
     marginTop: theme.spacing(0),
     }
   },
@@ -441,6 +447,10 @@ function Header() {
                     <img className={classes.socials}   src="/images/facebook.png" /></a>
                     <a href="https://www.instagram.com/findmeet.io/">
                     <img className={classes.socials}   src="/images/instagram.png" />
+                    
+                    </a>
+                    <a href="https://www.instagram.com/findmeet.io/">
+                    <img className={classes.socials}   src="/images/medium.png" />
                     
                     </a>
                     

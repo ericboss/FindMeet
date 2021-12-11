@@ -147,7 +147,7 @@ name:{
  marginBottom: theme.spacing(-1),
  [theme.breakpoints.down("sm")]:{
     lineHeight : "55px" ,
-    marginLeft: theme.spacing(-15)
+    marginLeft: theme.spacing(-18)
  }
 },
 jobTitle:{
@@ -159,7 +159,8 @@ textAlign: "center",
 fontSize: theme.spacing(3),
 [theme.breakpoints.down("sm")]:{
     width:"300px",
-    marginRight:theme.spacing(9)
+    marginRight:theme.spacing(15),
+    marginLeft: theme.spacing(-3)
   }
 },
 logoMern:{
@@ -209,7 +210,7 @@ nameEric:{
  marginBottom: theme.spacing(-1),
  [theme.breakpoints.down("sm")]:{
      marginRight: theme.spacing(30), 
-     marginLeft: theme.spacing(-28),
+     marginLeft: theme.spacing(-30),
  }
  },
  jobTitleEric:{
@@ -248,7 +249,7 @@ nameEric:{
  
  marginBottom: theme.spacing(-1),
  [theme.breakpoints.down("sm")]:{
-    marginLeft:theme.spacing(-28),
+    marginLeft:theme.spacing(-30),
  }
  },
  jobTitleAlex:{
@@ -276,7 +277,7 @@ nameEric:{
  
  marginBottom: theme.spacing(-1),
  [theme.breakpoints.down("sm")]:{
-    marginLeft:theme.spacing(-29),
+    marginLeft:theme.spacing(-31),
     fontSize: theme.spacing(5),
  }
 
@@ -293,7 +294,7 @@ nameEric:{
     
     fontSize: theme.spacing(3),
     [theme.breakpoints.down("sm")]:{
-        marginLeft:theme.spacing(-21),
+        marginLeft:theme.spacing(-23),
     }
  },
  nameFarhul:{
@@ -321,7 +322,7 @@ nameEric:{
     
     marginBottom: theme.spacing(-1),
     [theme.breakpoints.down("sm")]:{
-        marginLeft:theme.spacing(-18),
+        marginLeft:theme.spacing(-20),
     }
  },
  jobTitlePaul:{
@@ -341,7 +342,7 @@ nameEric:{
     marginBottom:"50px",
     marginLeft: theme.spacing(5),
     [theme.breakpoints.down("sm")]:{
-        marginLeft:theme.spacing(-5), 
+        marginLeft:theme.spacing(-7), 
         width:"85%", 
         height: "auto",
     }
@@ -386,7 +387,7 @@ nameEric:{
 
     fontSize: theme.spacing(3),
     [theme.breakpoints.down("sm")]:{
-        marginLeft:theme.spacing(-32.5),
+        marginLeft:theme.spacing(-36),
         fontSize: theme.spacing(2.3),
     }
  }
@@ -398,7 +399,7 @@ function Teams() {
     const classes= useStyles();
     return (
         <div className={classes.main}>
-            <Fade bottom>
+          
             <div className= {classes.teamInfo}>
                 <Typography className={classes.title} variant="h2"> Team</Typography>
                 <Typography variant="body2"
@@ -665,7 +666,7 @@ function Teams() {
                
             </div>
             </div>         
-            </Fade>
+           
         </div>
     )
 }

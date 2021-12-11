@@ -64,6 +64,10 @@ function Footer() {
                     <img className={classes.subSocials}   src="/images/instagram.png" />
                     
                     </a>
+                    <a href="https://www.instagram.com/findmeet.io/">
+                    <img className={classes.subSocials}   src="/images/medium.png" />
+                    
+                    </a>
             </div>
             </div>
         </div>
