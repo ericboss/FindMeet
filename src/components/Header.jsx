@@ -32,12 +32,12 @@ const useStyles = makeStyles((theme) =>({
         width: '100%',
         top:0,
         margin : 0,
-       marginTop: theme.spacing(8),
+      
         [theme.breakpoints.down("sm")]:{
-
+          marginTop:  theme.spacing(-10),
             height: theme.spacing(80),
         width: '100%',
-        marginBottom:theme.spacing(20)
+        marginBottom:theme.spacing(30)
             
           }
        
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) =>({
       }
   },
   menu:{
-      display: "none",
+      display: "flex",
       alignItems:"center", 
       justifyContent:"space-around",
       marginRight:theme.spacing(30),
@@ -330,7 +330,9 @@ ti:{
   fontWeight:"100"
 },
 menuPaper: {
-  backgroundColor: "#9D366C"
+  backgroundColor: "#9D366C",
+  width:theme.spacing(80),
+  
 }
 
  
@@ -398,7 +400,7 @@ function Header() {
          }}
          classes={{ paper: classes.menuPaper }}
       >
-        <MenuItem  style={{width:"800px", height:"50px",color:"#fff"}} onClick={handleClose}>Home</MenuItem>
+        <MenuItem  style={{width:"1500px", height:"50px",color:"#fff"}} onClick={handleClose}>Home</MenuItem>
         <MenuItem  onClick={handleClose}> <a className={classes.menuItems} href="#HowItWorks">How it Works</a></MenuItem>
         <MenuItem  onClick={handleClose}><a className={classes.menuItems} href="#tokenomics">Tokenomics</a></MenuItem>
         <MenuItem   onClick={handleClose}><a className={classes.menuItems} href="#timeline">Roadmap</a></MenuItem>

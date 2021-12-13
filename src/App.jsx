@@ -17,10 +17,11 @@ import Section7 from "./components/Section7";
 import Section8 from "./components/Section8";
 import Section9 from "./components/Section9";
 import Menus from "./components/Menu";
+import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Menus/>
+     
       <Header  />
       <Section1  />
       

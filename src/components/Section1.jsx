@@ -11,6 +11,8 @@ main: {
     backgroundPosition: 'bottom center', 
     backgroundSize: 'cover',  
     marginTop:theme.spacing(20),
+    width:"100%",
+    height:"auto",
     [theme.breakpoints.down("sm")]:{
         
             marginTop:theme.spacing(15),
@@ -19,6 +21,8 @@ main: {
         
 }, 
 about:{
+    margin:0,
+    padding:0,
     display: "flex",
     alignItems:"center",
     justifyContent: "space-around",
