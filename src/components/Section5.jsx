@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) =>({
     sectionInfo:{
         marginLeft:theme.spacing(0),
         [theme.breakpoints.down("sm")]:{
-            marginRight: theme.spacing(80)
+            marginRight: theme.spacing(83)
         }
     },
     sectionText:{
@@ -122,7 +122,7 @@ const useStyles = makeStyles((theme) =>({
         boxShadow: "rgba(250, 104, 104, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
             marginTop: theme.spacing(-2), 
             marginRight: theme.spacing(50),
-            marginLeft: theme.spacing(-6),
+            marginLeft: theme.spacing(-9),
             width: theme.spacing(22),
             
           }

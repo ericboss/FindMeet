@@ -66,7 +66,7 @@ body1:{
     width:theme.spacing(64),
     textAlign:"center",
     [theme.breakpoints.down("sm")]:{
-        marginLeft: theme.spacing(8), 
+        marginLeft: theme.spacing(10), 
         marginRight: theme.spacing(5),
         width: "300px"
       }
